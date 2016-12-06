@@ -14,7 +14,7 @@
                             <label for="inputHo" class="col-sm-2 control-label" lang="jp" required>Họ và tên：</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputHo"
-                                       placeholder="Đỗ Văn A" value="{{ Input::old('inputHo') }}" 
+                                       placeholder="Đỗ Văn A" value="{{ Input::old('inputHo') }}"
                                        name="inputHo" point="10" required>
                                 <div class="output" id="inputHo_output" lang="jp"></div>
                             </div>
