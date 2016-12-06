@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class chuyenNganhController extends Controller
+class ChuyenNganhController extends Controller
 {
     //
 }

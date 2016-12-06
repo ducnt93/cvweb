@@ -52,13 +52,13 @@
                         @endif
       <form action="luu" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
-          @include('thong_tin_ca_nhan')
-          @include('gioi_thieu_ban_than')
-          @include('ly_do_den_nhat')
-          @include('trinh_do_hoc_van')
-          @include('ky_nang_chuyen_mon')
-          @include('kinh_nghiem_lam_viec')
-          @include('du_an_tham_gia')
+          @include('recruitment.thong_tin_ca_nhan')
+          @include('recruitment.gioi_thieu_ban_than')
+          @include('recruitment.ly_do_den_nhat')
+          @include('recruitment.trinh_do_hoc_van')
+          @include('recruitment.ky_nang_chuyen_mon')
+          @include('recruitment.kinh_nghiem_lam_viec')
+          @include('recruitment.du_an_tham_gia')
 
       </form>
 
