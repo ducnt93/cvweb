@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ngoaingu extends Model
+class NgoaiNgu extends Model
 {
     protected $table = "ngoaingu";
 }
