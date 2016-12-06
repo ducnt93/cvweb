@@ -25,7 +25,7 @@
             "App\\": "app/"
         },
          "files": [
-         "app/function.php"
+         "app/Common/function.php"
         ]
     },
     "autoload-dev": {
