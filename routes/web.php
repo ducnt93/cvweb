@@ -11,15 +11,14 @@
 |
 */
 
-Route::get('/', 'controller@welcome');
-Route::post('luu','usersController@postLuu');
-Route::get('themkn','controller@themkn');
-Route::get('themda','controller@themda');
-Route::get('guimail','MailController@basic_email');
-Route::get('/index','Controller@index');
- 
+Route::get('/', 'Controller@welcome');
+Route::post('luu','UserController@postLuu');
+//Route::get('themkn','Controller@themkn');
+//Route::get('themda','Controller@themda');
+//Route::get('guimail','MailController@basic_email');
+Route::get('/ajax/{idTheLoai}','SearchController@search');
 Route::get('html_email/{ppto}','MailController@html_email');
-Route::get('test', function() {
+/*Route::get('test', function() {
 
     $phpWord = new \PhpOffice\PhpWord\PhpWord();
 
@@ -55,4 +54,4 @@ Route::get('test', function() {
     $objWriter->save('public\file\helloWorld.docx');
  
 
-});
+});*/

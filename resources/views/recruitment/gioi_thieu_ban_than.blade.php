@@ -38,8 +38,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                          <label class="col-sm-2 control-label">Sở thích về thể thao</label>
-                          <div class="col-sm-10">
+                          <label class="col-sm-2 control-label">Sở thích</label>
+                          <!--<div class="col-sm-10">
                             <label data-toggle="collapse" data-target="#collapseTheThao" aria-expanded="false" aria-controls="collapseTheThao">
                               <input name="sothich[]" value="thethao" type="checkbox"/> Yêu thích thể thao
                             </label>
@@ -141,7 +141,17 @@
                                  
                                 <div class="clearfix"></div>
                               </div>
+                            </div>-->
+                        <!---chen them code vao day-->
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="target">
+                                <div class="col-lg-12" id="searchKQ" class="inner"></div>
+                                <div class="col-lg-12" id="sothich" class="sothich"></div>
+                                <div class="col-lg-12" id="dsst" class="sothich"></div>
+
                             </div>
+                        <!---ket thuc chen them code vao day-->
                           </div>
                     </div>
                     <div class="form-group">
@@ -176,3 +186,76 @@
             </div>
         </div>
       <!-- end div Giới thiệu bản thân -->
+@section('script')
+<script>
+    var xTriggered = 0;
+    $( "#target" ).keyup(function( event ) {
+        var idTheLoai = $(this).val();
+        var res = idTheLoai.split(" ");
+        if(res[res.length-1] == null || res[res.length-1] == ''){
+           // alert('asdasd');
+            $.get('ajax/haubasdasjdnasdnsakjdnasndjaks', function (data) {
+                //    alert(idTheLoai);
+                $("#searchKQ").html(data);
+            });
+        }
+        else {
+            $.get('ajax/' + res[res.length-1], function (data) {
+                //    alert(idTheLoai);
+                $("#searchKQ").html(data);
+            });
+        }
+    }).keydown(function( event ) {
+        if ( event.which == 13 ) {
+            event.preventDefault();
+        }
+    });
+
+    $( "#other").click(function() {
+        $( "#target" ).keyup();
+    });
+    $( "#searchKQ").click(function() {
+        var sothichcanhan = document.getElementById("target").value;
+        var arr1 = sothichcanhan.split(",");
+        var arr = arr1.slice(0,arr1.length -1);
+        sothichcanhan='';
+        for(i=0; i<arr.length; i++) {
+           if (arr[i].trim() != null || arr[i].trim() != '' || arr)
+                sothichcanhan += arr[i].trim() + ', ';
+        }
+        var kq = document.getElementById("kqst").value;
+        sothichcanhan += kq+', ';
+        document.getElementById('target').value = sothichcanhan;
+    });
+
+
+</script>
+@endsection
+<style>
+    /* Tooltip container */
+    .tooltip1 {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+
+    /* Tooltip text */
+    .tooltip1 .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip1:hover .tooltiptext {
+        visibility: visible;
+    }
+</style>

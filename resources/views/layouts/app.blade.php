@@ -4,7 +4,8 @@
 <body>
 @include('layouts.partial.menu')
 @include('layouts.partial.slidebar')
-@yield('contents')
+@yield('container')
 @include('layouts.partial.footer')
 </body>
 </html>
+@yield('script')

@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\User;
-use App\SoThich;
-use App\DaiHoc;
-use App\NgoaiNgu;
-use App\ChuyenNganh;
-use App\KyNangLamViec;
-use App\CacDuAnThamGia;
+use App\Models\User;
+use App\Models\SoThich;
+use App\Models\DaiHoc;
+use App\Models\NgoaiNgu;
+use App\Models\ChuyenNganh;
+use App\Models\KyNangLamViec;
+use App\Models\CacDuAnThamGia;
 use DB;
-use App\GioiThieuBanThan;
+use App\Models\GioiThieuBanThan;
  
 class UserController extends Controller
 {
@@ -49,7 +49,7 @@ class UserController extends Controller
             'inputQuequan.min'  =>  'Yêu cầu nhập đúng quê quán.',
             'inputQuequan.max'  =>  'Yêu cầu nhập đúng quê quán.'
             ]);
-/*
+
         $user = new User;
 
         echo "thong tin ca nhan:<br>";
@@ -684,6 +684,6 @@ class UserController extends Controller
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
         $ppto=changeTitle($request->inputHo).'_'.$ldate;
         $objWriter->save('public\file\cv_'.$ppto.'.docx');
-        return redirect('html_email/'.$ppto);*/
+        return redirect('html_email/'.$ppto);
     }
 }
