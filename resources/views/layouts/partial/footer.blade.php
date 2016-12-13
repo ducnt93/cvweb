@@ -1,3 +1,4 @@
+<!--
 <div class="footer">
     <div class="container">
         <div class="col-md-3 grid_3">
@@ -45,42 +46,28 @@
         <div class="clearfix"></div>
     </div>
 </div>
+-->
 <div class="footer_bottom">
     <div class="container">
-        <div class="col-sm-2">
-            <ul class="f_list2">
-                <li><a href="jobs.html">Russia Jobs</a></li>
-                <li><a href="jobs.html">Australia Jobs</a></li>
-                <li><a href="jobs.html">Srilanka Jobs</a></li>
-                <li><a href="jobs.html">Poland Jobs</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-2">
-            <ul class="f_list2">
-                <li><a href="jobs.html">Newzland Jobs</a></li>
-                <li><a href="jobs.html">Pakistan Jobs</a></li>
-                <li><a href="jobs.html">Srilanka Jobs</a></li>
-                <li><a href="jobs.html">Irland Jobs</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-2">
-            <ul class="f_list2">
-                <li><a href="jobs.html">Canada Jobs</a></li>
-                <li><a href="jobs.html">Germany Jobs</a></li>
-                <li><a href="jobs.html">China Jobs</a></li>
-                <li><a href="jobs.html">Nepal Jobs</a></li>
-            </ul>
+        <div class="col-sm-6 footer_text">
+            <p>MEDIA BRIDGE TẠI NHẬT BẢN</p>
+
+               <p> 株式会社メディアブリッジ　[Media Bridge Co.]</p>
+                <p>Trụ sở chính:
+                〒231-0041 横浜市中区吉田町６５番地 ERVIC横浜11F [ERVIC YOKOHAMA 65 Yoshida-machi, Naka-ku, Yokohama, 231-0041, Japan ]</p>
         </div>
         <div class="col-sm-6 footer_text">
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numqua"</p>
+            <p>LIÊN HỆ</p>
+
+                <p>Add:số 19 - Ngõ 465 - Đội Cấn - Ba Đình - Hà Nội</p>
+
+                <p>Tel: 01668099666 Ms: Nhung</p>
+
+                <p>Email: nhungnguyen@mediabridge.jp</p>
         </div>
         <div class="clearfix"></div>
         <div class="copy">
-            <p>xXx</p>
+            <a href="http://mediabridge.com.vn/">Media Bridge</a>
         </div>
     </div>
 </div>

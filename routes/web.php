@@ -17,7 +17,9 @@ Route::post('luu','UserController@postLuu');
 //Route::get('themda','Controller@themda');
 //Route::get('guimail','MailController@basic_email');
 Route::get('/ajax/{idTheLoai}','SearchController@search');
+Route::get('/ajaxtc/{idTheLoai}','SearchController@searchtc');
 Route::get('html_email/{ppto}','MailController@html_email');
+Route::get('exp/{mail}','UserController@xuatfile');
 /*Route::get('test', function() {
 
     $phpWord = new \PhpOffice\PhpWord\PhpWord();

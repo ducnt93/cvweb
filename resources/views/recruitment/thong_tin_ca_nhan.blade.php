@@ -23,7 +23,7 @@
                             <label for="inputNgaysinh" class="col-sm-2 control-label">Ngày sinh</label>
                             <div class="col-sm-10">
                                 <div class='input-group date'>
-                                    <input type='text' class="form-control" id='inputNgaysinh' name="inputNgaysinh" required/>
+                                    <input type='date' class="form-control" id='inputNgaysinh' name="inputNgaysinh" required/>
                                     <!-- <span class="input-group-addon">
                                          <span class="glyphicon glyphicon-calendar"></span>
                                      </span>-->
