@@ -13,24 +13,11 @@
                         <label class="col-sm-2 control-label">Bạn là người thuộc tính cách nào?</label>
                         <div class="col-sm-10">
                         <div class="well">
-                            <div class="form-group">
-                              <label for="sel1">Tính cách</label>
-                              <select name="tinhcach" class="form-control" id="sel1">
-                                <option>Chọn tính cách</option>
-                                <option>Tính cách cần cù </option>
-                                <option>Tính cách hành động</option>
-                                <option>Tính cách dám làm</option>
-                                <option>Tính cách kiên cường</option>
-                                <option>Tính cách nhạy cảm</option>
-                                <option>Tính cách lý trí</option>
-                                <option>Tính cách tự tin</option>
-                                <option>Tính cách kiên trì</option>
-                                <option>Tính cách ổn định chắc chắn</option>
-                                <option>Tính cách tỉ mỉ</option>
-                                <option>Tính cách cẩn thận</option>
-                                <option>Tính cách suy xét</option>
-                                <option>Tính cách mơ mộng</option>
-                              </select>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="targettc" name="tinhcachbanthan">
+                                <div class="col-lg-12" id="searchKQtc" class="inner2"></div>
+                                <div class="col-lg-12" id="sothichtc" class="tinhcach"></div>
+                                <div class="col-lg-12" id="dstc" class="tinhcach"></div>
                             </div>
                              
                             <div class="clearfix"></div>
@@ -38,110 +25,18 @@
                         </div>
                     </div>
                     <div class="form-group">
-                          <label class="col-sm-2 control-label">Sở thích về thể thao</label>
-                          <div class="col-sm-10">
-                            <label data-toggle="collapse" data-target="#collapseTheThao" aria-expanded="false" aria-controls="collapseTheThao">
-                              <input name="sothich[]" value="thethao" type="checkbox"/> Yêu thích thể thao
-                            </label>
-                            <div id="collapseTheThao" aria-expanded="false" class="collapse">
-                              <div class="well">
-                                <?php foreach ($sothich as $key): ?>
-                                  <?php if ($key->danhmucsothich=="Yêu thích thể thao"): ?>
-                                    <div class="col-sm-4">
-                                      <input type="checkbox" name="thethao[]" value="{{$key->tensothich}}" /> {{$key->tensothich}} <br>
-                                    </div>
-                                
-                                  <?php endif ?>
-                                <?php endforeach ?>
-                                 
-                                <div class="clearfix"></div>
-                              </div>
+                          <label class="col-sm-2 control-label">Sở thích</label>
+
+                        <!---chen them code vao day-->
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="target" name="sothichbanthan">
+                                <div class="col-lg-12" id="searchKQ" class="inner"></div>
+                                <div class="col-lg-12" id="sothich" class="sothich"></div>
+                                <div class="col-lg-12" id="dsst" class="sothich"></div>
                             </div>
-                          </div>
-                    </div>
-                    <div class="form-group">
-                          <label class="col-sm-2 control-label">Sở thích đọc sách</label>
-                          <div class="col-sm-10">
-                            <label data-toggle="collapse" data-target="#collapseSach" aria-expanded="false" aria-controls="collapseSach">
-                              <input name="sothich[]" value="docsach" type="checkbox"/> Yêu thích đọc sách
-                            </label>
-                            <div id="collapseSach" aria-expanded="false" class="collapse">
-                              <div class="well">
-                                <?php foreach ($sothich as $key): ?>
-                                  <?php if ($key->danhmucsothich=="đọc sách"): ?>
-                                    <div class="col-sm-4">
-                                      <input type="checkbox" name="docsach[]" value="{{$key->tensothich}}" /> {{$key->tensothich}} <br>
-                                    </div>
-                                
-                                  <?php endif ?>
-                                <?php endforeach ?>
-                                <div class="clearfix"></div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="form-group">
-                          <label class="col-sm-2 control-label">Sở thích về âm nhạc</label>
-                          <div class="col-sm-10">
-                            <label data-toggle="collapse" data-target="#collapseNhac" aria-expanded="false" aria-controls="collapseNhac">
-                              <input name="sothich[]" value="amnhac" type="checkbox"/> Yêu thích âm nhạc
-                            </label>
-                            <div id="collapseNhac" aria-expanded="false" class="collapse">
-                              <div class="well">
-                                <?php foreach ($sothich as $key): ?>
-                                  <?php if ($key->danhmucsothich=="âm nhạc"): ?>
-                                    <div class="col-sm-4">
-                                      <input type="checkbox" name="amnhac[]" value="{{$key->tensothich}}" /> {{$key->tensothich}} <br>
-                                    </div>
-                                
-                                  <?php endif ?>
-                                <?php endforeach ?>
-                                <div class="clearfix"></div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="form-group">
-                          <label class="col-sm-2 control-label">Sở thích về phim ảnh</label>
-                          <div class="col-sm-10">
-                            <label data-toggle="collapse" data-target="#collapsePhim" aria-expanded="false" aria-controls="collapsePhim">
-                              <input name="sothich[]" value="phimanh" type="checkbox"/> Yêu thích phim ảnh
-                            </label>
-                            <div id="collapsePhim" aria-expanded="false" class="collapse">
-                              <div class="well">
-                                <?php foreach ($sothich as $key): ?>
-                                  <?php if ($key->danhmucsothich=="phim ảnh"): ?>
-                                    <div class="col-sm-4">
-                                      <input type="checkbox" name="phimanh[]" value="{{$key->tensothich}}" /> {{$key->tensothich}} <br>
-                                    </div>
-                                
-                                  <?php endif ?>
-                                <?php endforeach ?>
-                                <div class="clearfix"></div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="form-group">
-                          <label class="col-sm-2 control-label">Sở thích khác</label>
-                          <div class="col-sm-10">
-                            <label data-toggle="collapse" data-target="#collapseKhac" aria-expanded="false" aria-controls="collapseKhac">
-                              <input name="sothich[]" value="bosung" type="checkbox"/> Bổ sung thêm sở thích
-                            </label>
-                            <div id="collapseKhac" aria-expanded="false" class="collapse">
-                              <div class="well">
-                                <?php foreach ($sothich as $key): ?>
-                                  <?php if ($key->danhmucsothich=="Bổ sung thêm sở thích"): ?>
-                                    <div class="col-sm-4">
-                                      <input type="checkbox" name="bosung[]" value="{{$key->tensothich}}" /> {{$key->tensothich}} <br>
-                                    </div>
-                                
-                                  <?php endif ?>
-                                <?php endforeach ?>
-                                 
-                                <div class="clearfix"></div>
-                              </div>
-                            </div>
+
+                        <!---ket thuc chen them code vao day-->
                           </div>
                     </div>
                     <div class="form-group">
@@ -176,3 +71,89 @@
             </div>
         </div>
       <!-- end div Giới thiệu bản thân -->
+@section('script')
+<script>
+    var xTriggered = 0;
+    $( "#target" ).keyup(function( event ) {
+        var idTheLoai = $(this).val();
+        var res = idTheLoai.split(" ");
+        if(res[res.length-1] == null || res[res.length-1] == ''){
+           // alert('asdasd');
+            $.get('ajax/haubasdasjdnasdnsakjdnasndjaks', function (data) {
+                //    alert(idTheLoai);
+                $("#searchKQ").html(data);
+            });
+        }
+        else {
+            $.get('ajax/' + res[res.length-1], function (data) {
+                //    alert(idTheLoai);
+                $("#searchKQ").html(data);
+            });
+        }
+    }).keydown(function( event ) {
+        if ( event.which == 13 ) {
+            event.preventDefault();
+        }
+    });
+
+    $( "#other").click(function() {
+        $( "#target" ).keyup();
+    });
+
+    $( "#searchKQtc").click(function() {
+        debugger
+        var tinhcach = document.getElementById("targettc").value;
+        var arr1 = tinhcach.split(",");
+        var arr = arr1.slice(0,arr1.length -1);
+        tinhcach='';
+        for(i=0; i<arr.length; i++) {
+           if (arr[i].trim() != null && arr[i].trim() != ''){
+               tinhcach += arr[i].trim() + ', ';
+           }
+        }
+        var kq = document.getElementById("kqtc").value;
+        if (kq.trim() != null && kq.trim() != '' ){
+            tinhcach += kq+', ';
+        }
+        document.getElementById('targettc').value = tinhcach;
+    });
+    $( "#targettc" ).keyup(function( event ) {
+        var idTheLoai = $(this).val();
+        var res = idTheLoai.split(" ");
+        if(res[res.length-1] == null || res[res.length-1] == ''){
+            // alert('asdasd');
+            $.get('ajaxtc/haubasdasjdnasdnsakjdnasndjaks', function (data) {
+                //    alert(idTheLoai);
+                $("#searchKQtc").html(data);
+            });
+        }
+        else {
+            $.get('ajaxtc/' + res[res.length-1], function (data) {
+                //    alert(idTheLoai);
+                $("#searchKQtc").html(data);
+            });
+        }
+    }).keydown(function( event ) {
+        if ( event.which == 13 ) {
+            event.preventDefault();
+        }
+    });
+
+
+    $( "#searchKQ").click(function() {
+        var sothichcanhan = document.getElementById("target").value;
+        var arr1 = sothichcanhan.split(",");
+        var arr = arr1.slice(0,arr1.length -1);
+        sothichcanhan='';
+        for(i=0; i<arr.length; i++) {
+            if (arr[i].trim() != null && arr[i].trim() != '' || arr)
+                sothichcanhan += arr[i].trim() + ', ';
+        }
+        var kq = document.getElementById("kqst").value;
+        if (kq.trim() != null && kq.trim() != '' ) {
+            sothichcanhan += kq + ', ';
+        }
+        document.getElementById('target').value = sothichcanhan;
+    });
+</script>
+@endsection

@@ -22,8 +22,8 @@ class MailController extends Controller
         $GLOBALS['ppto']=$ppto;
         print_r($GLOBALS['ppto']);
     	$data=['name'=>'Portgas D. Ace'];
-    	Mail::send(['text'=>'mail'],$data,function($message){
-    		$message->to('nhung@mediabridge.vn','Nguyễn Thị Nhung')->subject('Có cv mới');
+    	Mail::send(['text'=>'recruitment\mail'],$data,function($message){
+    		//$message->to('nhung@mediabridge.vn','Nguyễn Thị Nhung')->subject('Có cv mới');
             $message->to('dovanhungk57@gmail.com','Nguyễn Thị Nhung')->subject('Có cv mới');
     		$message->attach('public\file\cv_'.$GLOBALS['ppto'].'.docx');
     		$message->from('dovanhungcis@gmail.com','Portgas D. Ace');

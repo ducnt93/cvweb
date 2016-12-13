@@ -42,7 +42,7 @@
                               <div class="form-group">
                                   <label for="inputSo_nguoi_du_an_1" class="col-sm-3 control-label">Số người tham gia dự án</label>
                                   <div class="col-sm-9">
-                                      <input type="text" class="form-control" id="inputSo_nguoi_du_an_1" name="inputSo_nguoi_du_an[]" point="">
+                                      <input type="number" min="1" class="form-control" id="inputSo_nguoi_du_an_1" name="inputSo_nguoi_du_an[]" point="">
                                   </div>
                               </div>
                               <div class="form-group">

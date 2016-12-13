@@ -21,7 +21,7 @@ class Controller extends BaseController
             'chuyennganh' => $chuyennganh,
             'sothich' => $sothich
         ];
-        return view('welcome', $viewData);
+        return view('recruitment.form_thong_tin', $viewData);
     }
 
     public function themkn()
