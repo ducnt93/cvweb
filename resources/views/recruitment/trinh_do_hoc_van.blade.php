@@ -20,7 +20,7 @@
                               <div class="well">
                                   <div class="form-group">
                                     <label for="truong_tot_nghiep">Trường tốt nghiệp:</label>
-                                    <input type="text" class="form-control" id="truong_tot_nghiep" name="truong_tot_nghiep[]" />
+                                    <input type="text" class="form-control" name="truong_tot_nghiep[]" />
                                   </div>
                                   <div class="form-group">
                                     <label for="nganh_tot_nghiep">Ngành tốt nghiệp:</label>
@@ -35,16 +35,16 @@
                                     <input type="month" class="form-control" id="nam_tot_nghiep" name="nam_tot_nghiep[]" />
                                   </div>
                                   <div class="clearfix"></div>
-                              </div>  
-                                
+                              </div>
+
                           </div>
                            </li>
-                            
+
                           </ol>
                           <nav aria-label="...">
                             <ul class="pager">
                               <li><a id="addHocVan" href="#trinh_do_hoc_van">Thêm</a></li>
-                                
+
                             </ul>
                           </nav>
                         </span>
@@ -153,8 +153,8 @@
                                         </div>
                                         <div class="col-sm-4">
                                             <label><input type="radio" name="nhat" value="N5" /> N5</label> <br>
-                                        </div>                                       
-                                         
+                                        </div>
+
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                         <div class="col-sm-4">
                                             <label><input type="radio" name="trung" value="HSK5" /> HSK5</label> <br>
                                         </div>
-                                        
+
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -188,4 +188,3 @@
             </div>
         </div>
       <!-- end div Trình độ học vấn -->
- 

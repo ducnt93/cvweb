@@ -12,46 +12,14 @@ use App\Models\KyNangLamViec;
 use App\Models\CacDuAnThamGia;
 use DB;
 use App\Models\GioiThieuBanThan;
- 
+use Illuminate\Support\Facades\Input;
+use App\Http\Requests\UserRequest;
+
 class UserController extends Controller
 {
-		public function postLuu(Request $request){
-
-        $this->validate($request,[
-            'inputHo'       =>  'min:3|max:50',
-            'inputDiachi'   =>  'min:3|max:50',
-            'inputSdt'      =>  'regex:/(0)[0-9]{9}/|min:9|max:14',
-            'inputEmail'    =>  'unique:users,email',
-            'inputQuequan'  =>  'min:3|max:50',
-            //'inputSo_nguoi_du_an[]'=>'required',
-            /*'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',
-            'inputNgaysinh'=>'required',*/
-            ],[
-            "inputHo.min"       =>  'Yêu cầu nhập đúng họ tên mình.',
-            "inputHo.max"       =>  "Yêu cầu nhập đúng họ tên mình.",
-            "inputDiachi.min"   =>  'Yêu cầu nhập đúng địa chỉ.',
-            "inputDiachi.max"   =>  'Yêu cầu nhập đúng địa chỉ.',
-            "inputSdt.regex"    =>  'Yêu cầu nhập đúng số điện thoại.',
-            "inputSdt.min"      =>  'Yêu cầu nhập đúng số điện thoại.',
-            'inputSdt.max'      =>  'Yêu cầu nhập đúng số điện thoại.',
-            'inputEmail.unique' =>  'Email vừa nhập đã được sử dụng.',
-            'inputQuequan.min'  =>  'Yêu cầu nhập đúng quê quán.',
-            'inputQuequan.max'  =>  'Yêu cầu nhập đúng quê quán.'
-            ]);
-
+		public function postLuu(UserRequest $request){
         $user = new User;
-
+        //dd(Input::all());
         echo "thong tin ca nhan:<br>";
     	echo $request->inputHo;
         $user->name = $request->inputHo;
@@ -141,8 +109,9 @@ class UserController extends Controller
 
         //cap nhat xong so thich
 
-
-
+        //print_r($request->truong_tot_nghiep);
+           /* echo "test: <br>";
+            print_r($request->truong_tot_nghiep);*/
         if(isset($request->truong_tot_nghiep)){
             $biendem = count($request->truong_tot_nghiep);
             for($i = 0; $i < $biendem; $i++){
@@ -156,7 +125,12 @@ class UserController extends Controller
                         $daihocdb->nganh = '';
                     $daihocdb->namNH = $request->nam_nhap_hoc[$i];
                     $daihocdb->namTN = $request->nam_tot_nghiep[$i];
+                    echo "<br>";
+                    echo $request->truong_tot_nghiep[$i];
                     $daihocdb->save();
+                    echo "<br>";
+                    echo $request->nam_nhap_hoc[$i];
+                    echo "<br>";
                 }
             }
         }
@@ -725,7 +699,7 @@ class UserController extends Controller
 
     public function xuatfile($mail){
 
-        $phpWord = new \PhpOffice\PhpWord\TemplateProcessor('public\file\cvtmp.docx');
+        $phpWord = new \PhpOffice\PhpWord\TemplateProcessor('public/file/cvtmp.docx');
         $findUser = DB::table('users')->where('email', $mail)->first();
         $phpWord->setValue('hoten',$findUser->name);
         $phpWord->setValue('ngaythangnamsinh',$findUser->ngaysinh);

@@ -26,6 +26,8 @@
     <script src="{{asset('public/cv/js/bootstrap-select.min.js')}}"></script>
     <script src="public/cv/js/function.js"></script>
     <!--<script src="js/tinhthanh.js"></script>-->
+    <script src="public/cv/js/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="public/cv/css/bootstrap-datepicker3.css">
     <!----font-Awesome----->
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>

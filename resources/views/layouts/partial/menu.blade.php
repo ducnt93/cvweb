@@ -11,8 +11,8 @@
             <a class="navbar-brand" href="#" style="color: white; font-size: 40px;">Media Bridge</a>
         </div>
         <!--/.navbar-header-->
-        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
-            <!--/.navbar-header-- <ul class="nav navbar-nav">
+        <!-- <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
+           /.navbar-header-- <ul class="nav navbar-nav">
                  <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
                      <ul class="dropdown-menu">
@@ -91,9 +91,9 @@
                  </li>
                  <li><a href="login.html">Login</a></li>
                  <li><a href="resume.html">Upload Resume</a></li>
-             </ul>-->
+             </ul>
          </div>
-         <div class="clearfix"></div>
+         <div class="clearfix"></div>-->
      </div>
      <!--/.navbar-collapse-->
 </nav>

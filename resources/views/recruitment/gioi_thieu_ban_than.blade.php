@@ -38,7 +38,6 @@
 
                         <!---ket thuc chen them code vao day-->
                           </div>
-                    </div>
                     <div class="form-group">
                           <label class="col-sm-2 control-label">Ước mơ</label>
                           <div class="col-sm-10">
