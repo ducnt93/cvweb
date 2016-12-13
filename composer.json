@@ -7,7 +7,8 @@
     "require": {
         "php": ">=5.6.2",
         "laravel/framework": "5.3.*",
-        "phpoffice/phpword": "^0.13.0"
+        "phpoffice/phpword": "^0.13.0",
+        "barryvdh/laravel-debugbar": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -24,7 +25,7 @@
             "App\\": "app/"
         },
          "files": [
-         "app/function.php"
+         "app/Common/function.php"
         ]
     },
     "autoload-dev": {
