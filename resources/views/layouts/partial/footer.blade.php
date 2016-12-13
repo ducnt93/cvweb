@@ -52,18 +52,19 @@
         <div class="col-sm-6 footer_text">
             <p>MEDIA BRIDGE TẠI NHẬT BẢN</p>
 
-               <p> 株式会社メディアブリッジ　[Media Bridge Co.]</p>
-                <p>Trụ sở chính:
-                〒231-0041 横浜市中区吉田町６５番地 ERVIC横浜11F [ERVIC YOKOHAMA 65 Yoshida-machi, Naka-ku, Yokohama, 231-0041, Japan ]</p>
+            <p> 株式会社メディアブリッジ　[Media Bridge Co.]</p>
+            <p>Trụ sở chính:
+                〒231-0041 横浜市中区吉田町６５番地 ERVIC横浜11F [ERVIC YOKOHAMA 65 Yoshida-machi, Naka-ku, Yokohama, 231-0041, Japan
+                ]</p>
         </div>
         <div class="col-sm-6 footer_text">
             <p>LIÊN HỆ</p>
 
-                <p>Add:số 19 - Ngõ 465 - Đội Cấn - Ba Đình - Hà Nội</p>
+            <p>Add:số 19 - Ngõ 465 - Đội Cấn - Ba Đình - Hà Nội</p>
 
-                <p>Tel: 01668099666 Ms: Nhung</p>
+            <p>Tel: 01668099666 Ms: Nhung</p>
 
-                <p>Email: nhungnguyen@mediabridge.jp</p>
+            <p>Email: nhungnguyen@mediabridge.jp</p>
         </div>
         <div class="clearfix"></div>
         <div class="copy">
@@ -71,3 +72,12 @@
         </div>
     </div>
 </div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{asset('/js/jquery.min.js')}}"></script>
+<script src="{{asset('/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/cv/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{asset('/cv/js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('/cv/js/function.js')}}"></script>
+@yield('script')
+</html>
