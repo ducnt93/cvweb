@@ -29,7 +29,7 @@
                     <strong>Lỗi!</strong> Sai định dạng ảnh.
                 </div>
             @endif
-            <form action="luu" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data" id="form-user">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 @include('recruitment.thong_tin_ca_nhan')
                 @include('recruitment.gioi_thieu_ban_than')

@@ -31,7 +31,6 @@ class UserController extends Controller
 
     public function recruitmentPost(UserRequest $request)
     {
-        return redirect('/recruitment')->withInput();
         $user = new User;
         //dd(Input::all());
         echo "thong tin ca nhan:<br>";
