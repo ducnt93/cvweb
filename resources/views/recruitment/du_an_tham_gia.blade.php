@@ -35,16 +35,26 @@
                                   <label for="inputTime_begin_du_an_1"
                                          class="col-sm-3 control-label">Ngày bắt đầu dự án</label>
                                   <div class="col-sm-9">
-                                      <input type="date" class="form-control" id="inputTime_begin_du_an_1"
+                                      <div class='input-group date'>
+                                      <input type="text" class="form-control" id="inputTime_begin_du_an_1"
                                              name="inputTime_begin_du_an[]" point="">
+                                           <span class="input-group-addon" id="btn_inputTime_begin_du_an">
+                                         <span class="glyphicon glyphicon-calendar"></span>
+                                     </span>
+                                          </div>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputTime_end_du_an_1"
                                          class="col-sm-3 control-label">Ngày kết thúc dự án</label>
                                   <div class="col-sm-9">
-                                      <input type="date" class="form-control" id="inputTime_end_du_an_1"
+                                      <div class='input-group date'>
+                                      <input type="text" class="form-control" id="inputTime_end_du_an_1"
                                              name="inputTime_end_du_an[]" point="">
+                                             <span class="input-group-addon" id="btn_inputTime_end_du_an">
+                                         <span class="glyphicon glyphicon-calendar"></span>
+                                     </span>
+                                          </div>
                                   </div>
                               </div>
                               <div class="form-group">

@@ -11,14 +11,13 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         } </script>
-    <link href="{{asset('/css/bootstrap-3.1.1.min.css')}}" rel='stylesheet' type='text/css'/>
+    <link href="{{asset('/css/bootstrap-3.1.1.min.css')}}" rel='stylesheet' type='text/css'/>\
     <link href="{{asset('/cv/css/bootstrap-datepicker3.css')}}" rel='stylesheet' type='text/css'/>
     <!-- Custom Theme files -->
     <link href="{{asset('/css/style.css')}}" rel='stylesheet' type='text/css'/>
-    <link href='//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet'
-          type='text/css'>
     <!----font-Awesome----->
     <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
     <!----font-Awesome----->
-    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet'
+          type='text/css'>
 </head>

@@ -36,8 +36,10 @@
                                       <div class="form-group">
                                           <label for="timeBat_dau_lam_viec_1">Thời gian bắt đầu: </label>
                                           <div class="input-group date">
-                                            <input type="month" class="form-control" id="timeBat_dau_lam_viec_1"
+                                            <input type="text" class="form-control" id="timeBat_dau_lam_viec_1"
                                                    name="thoigianbatdau[]"/>
+                                               <span class="input-group-addon" id="btn_thoigianbatdau">
+                                         <span class="glyphicon glyphicon-calendar"></span></span>
                                           </div>
                                       </div>
                                       <div class="form-group">

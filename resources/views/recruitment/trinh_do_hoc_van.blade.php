@@ -22,7 +22,8 @@
                               <div class="well">
                                   <div class="form-group">
                                     <label for="truong_tot_nghiep">Trường tốt nghiệp:</label>
-                                    <input type="text" class="form-control" name="truong_tot_nghiep[]"/>
+                                    <input type="text" class="form-control"
+                                           name="truong_tot_nghiep[]"/>
                                   </div>
                                   <div class="form-group">
                                     <label for="nganh_tot_nghiep">Ngành tốt nghiệp:</label>
@@ -31,29 +32,34 @@
                                   </div>
                                   <div class="form-group">
                                     <label for="nam_tot_nghiep">Năm Nhập học:</label>
-                                          <div class='input-group date'>
-                                          <input type="text" class="form-control" name="nam_nhap_hoc[]"/>
-                                       <span class="input-group-addon" id="btn_nam_nhap_hoc">
+                                      <div class='input-group date'>
+                                    <input type="month" class="form-control" name="nam_nhap_hoc[]"/>
+                                      <span class="input-group-addon">
                                          <span class="glyphicon glyphicon-calendar"></span>
                                      </span>
-                                              </div>
+                                          </div>
                                   </div>
                                   <div class="form-group">
                                     <label for="nam_tot_nghiep">Năm tốt nghiệp:</label>
+                                      <div class='input-group date'>
                                     <input type="month" class="form-control"
                                            name="nam_tot_nghiep[]"/>
+                                      <span class="input-group-addon">
+                                         <span class="glyphicon glyphicon-calendar"></span>
+                                     </span>
+                                          </div>
                                   </div>
                                   <div class="clearfix"></div>
-                              </div>
-
+                              </div>  
+                                
                           </div>
                            </li>
-
+                            
                           </ol>
                           <nav aria-label="...">
                             <ul class="pager">
                               <li><a id="addHocVan" href="#trinh_do_hoc_van">Thêm</a></li>
-
+                                
                             </ul>
                           </nav>
                         </span>
@@ -198,3 +204,4 @@
     </div>
 </div>
 <!-- end div Trình độ học vấn -->
+ 

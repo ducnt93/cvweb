@@ -29,7 +29,7 @@
                     <strong>Lỗi!</strong> Sai định dạng ảnh.
                 </div>
             @endif
-            <form action="" method="POST" enctype="multipart/form-data" id="form_user">
+            <form action="luu" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 @include('recruitment.thong_tin_ca_nhan')
                 @include('recruitment.gioi_thieu_ban_than')
@@ -47,17 +47,124 @@
 
     </div>
 @endsection
-
 @section('script')
+    <script src="{{asset('/cv/js/user-datepicker.js')}}"></script>
+    <script src="{{asset('/cv/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('/cv/js/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('/cv/js/formValidation.min.js')}}"></script>
     <script>
         $(document).ready(function () {
+
+            /*    //Jquery step:
+             var form = $("#form-user").show();
+             form.steps({
+             headerTag: "h3",
+             bodyTag: "section",
+             transitionEffect: "slideLeft",
+             onStepChanging: function (event, currentIndex, newIndex) {
+             // Allways allow previous action even if the current form is not valid!
+             if (currentIndex > newIndex) {
+             return true;
+             }
+             // Needed in some cases if the user went back (clean up)
+             if (currentIndex < newIndex) {
+             // To remove error styles
+             form.find(".body:eq(" + newIndex + ") label.error").remove();
+             form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+             }
+             form.validate().settings.ignore = ":disabled,:hidden";
+             return form.valid();
+             },
+             onFinishing: function (event, currentIndex) {
+             form.validate().settings.ignore = ":disabled";
+             return form.valid();
+             },
+             onFinished: function (event, currentIndex) {
+             var newInput = $("<input name='formSubmit' type='hidden' value=''>");
+             $('input#fileToUpload').after(newInput);
+             form.submit();
+             },
+             }).validate({
+             errorPlacement: function errorPlacement(error, element) {
+             element.before(error);
+             },
+             rules: {
+             // Thong tin ca nhan
+             inputTenDangNhap: "required",
+             inputMatKhau: {
+             required: true,
+             minlength: 1
+             },
+             inputMatKhauConfirm: {
+             required: true,
+             minlength: 1,
+             equalTo: "#inputMatKhau"
+             },
+             inputHo: "required",
+             inputNgaysinh: "required",
+             inputSdt: "required",
+             inputEmail: {
+             required: true,
+             email: true
+             },
+             fileToUpload: {
+             required: true,
+             extension: "jpg|jpeg|png|gif",
+             filesize: 1048576
+             },
+             inputLyDo: "required",
+
+             // Trinh do hoc van
+             inputTruong: "required",
+             inputNganh: "required",
+             inputNam: "required",
+             },
+             messages: {
+             // Thong tin ca nhan
+             inputTenDangNhap: "Tên đăng nhập không được để trống.",
+             inputMatKhau: {
+             required: "Mật khẩu không được để trống.",
+             minlength: "Mật khẩu phải dài hơn 8 ký tự"
+             },
+             inputMatKhauConfirm: {
+             required: "Xác nhận mật khẩu không được để trống.",
+             minlength: "Mật khẩu phải dài hơn 8 ký tự",
+             equalTo: "Mật khẩu không khớp",
+             },
+             inputHo: "Họ tên không được để trống.",
+             inputNgaysinh: "Ngày sinh không được để trống",
+             inputSdt: "Số điện thoại không được để trống",
+             inputEmail: {
+             required: "Email không được để trống.",
+             email: "Định dạng email không đúng."
+             },
+             fileToUpload: {
+             required: "Ảnh đại diện không được để trống.",
+             extension: "Ảnh không đúng định dạng",
+             filesize: "Ảnh có kích thước lớn hơn 1MB. Xin chọn kích ảnh khác."
+             },
+             inputLyDo: "Lý do không được để trống",
+
+             // Trinh do hoc van
+             inputTruong: "Không được để trống.",
+             inputNganh: "Không được để trống.",
+             inputNam: "Không được để trống.",
+
+             }
+             });
+             */
+            $("#addDu_an_thuc_te").change(function () {
+                $.get('themda', function (data) {
+                    $("#addDu_an_thuc_te").html(data);
+                });
+            });
             var xTriggered = 0;
             $("#target").keyup(function (event) {
                 var idTheLoai = $(this).val();
                 var res = idTheLoai.split(" ");
                 if (res[res.length - 1] == null || res[res.length - 1] == '') {
                     // alert('asdasd');
-                    $.get('ajax/nothing', function (data) {
+                    $.get('ajax/haubasdasjdnasdnsakjdnasndjaks', function (data) {
                         //    alert(idTheLoai);
                         $("#searchKQ").html(data);
                     });
@@ -100,7 +207,7 @@
                 var res = idTheLoai.split(" ");
                 if (res[res.length - 1] == null || res[res.length - 1] == '') {
                     // alert('asdasd');
-                    $.get('ajaxtc/nothing', function (data) {
+                    $.get('ajaxtc/haubasdasjdnasdnsakjdnasndjaks', function (data) {
                         //    alert(idTheLoai);
                         $("#searchKQtc").html(data);
                     });
@@ -134,59 +241,10 @@
                 document.getElementById('target').value = sothichcanhan;
             });
 
-            $("#addDu_an_thuc_te").change(function () {
-                $.get('themda', function (data) {
-                    $("#addDu_an_thuc_te").html(data);
-                });
-            });
-
             $("#addKinh_nghiem_lam_viec").change(function () {
                 $.get('themkn', function (data) {
                     $("#addremoveKinh_nghiem_lam_viec").html(data);
                 });
-            });
-
-            //datetimepicker nam sinh.
-            var date_input = $('input[name="inputNgaysinh"]');
-            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-            date_input.datepicker({
-                format: 'dd/mm/yyyy',
-                container: container,
-                todayHighlight: true,
-                autoclose: true,
-            });
-
-            //datetimepicker nam sinh.
-            var nam_nhap_hoc = $('input[name="nam_nhap_hoc[]"]');
-            nam_nhap_hoc.datepicker({
-                format: 'dd/mm/yyyy',
-                container: container,
-                todayHighlight: true,
-                autoclose: true,
-            });
-
-            $('#btn_inputNgaySinh').click(function () {
-                //datetimepicker nam sinh.
-                var date_input = $('input[name="inputNgaysinh"]');
-                var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-                date_input.datepicker({
-                    format: 'dd/mm/yyyy',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                }).focus();
-            });
-
-            $('#btn_nam_nhap_hoc').click(function () {
-                //datetimepicker nam sinh.
-                var date_input = $('input[name="nam_nhap_hoc[]"]');
-                var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-                date_input.datepicker({
-                    format: 'dd/mm/yyyy',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                }).focus();
             });
         });
     </script>
