@@ -1,14 +1,15 @@
 <!-- begin div Thông tin cá nhân -->
-        <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <label>
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#thong_tin_ca_nhan" aria-expanded="true" aria-controls="thong_tin_ca_nhan" style="color:white;">Thông tin cá nhân</a>
-                    </label>
-                </h4>
-            </div>
-            <div id="thong_tin_ca_nhan" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
+<div class="panel panel-primary">
+    <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+            <label>
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#thong_tin_ca_nhan"
+                   aria-expanded="true" aria-controls="thong_tin_ca_nhan" style="color:white;">Thông tin cá nhân</a>
+            </label>
+        </h4>
+    </div>
+    <div id="thong_tin_ca_nhan" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
                     <span class="form-horizontal">
                         <div class="form-group">
                             <label for="inputHo" class="col-sm-2 control-label" lang="jp" required>Họ và tên：</label>
@@ -23,10 +24,11 @@
                             <label for="inputNgaysinh" class="col-sm-2 control-label">Ngày sinh</label>
                             <div class="col-sm-10">
                                 <div class='input-group date'>
-                                    <input type='date' class="form-control" id='inputNgaysinh' name="inputNgaysinh" required/>
-                                    <!-- <span class="input-group-addon">
+                                    <input type='text' class="form-control" id='inputNgaysinh' name="inputNgaysinh"
+                                           required/>
+                                    <span class="input-group-addon" id="btn_inputNgaysinh">
                                          <span class="glyphicon glyphicon-calendar"></span>
-                                     </span>-->
+                                     </span>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +60,7 @@
                         <div class="form-group">
                             <label for="inputSdt" class="col-sm-2 control-label">Số điện thoại</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSdt"  required
+                                <input type="text" class="form-control" id="inputSdt" required
                                        placeholder="Số máy di động hoặc số máy cố định" name="inputSdt" point="10">
                             </div>
                         </div>
@@ -72,14 +74,15 @@
                         <div class="form-group">
                             <label for="inputQuequan" class="col-sm-2 control-label">Quê quán</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputQuequan" placeholder="Ba Dinh, Ha Noi" name="inputQuequan" point="5" required>
+                                <input type="text" class="form-control" id="inputQuequan" placeholder="Ba Dinh, Ha Noi"
+                                       name="inputQuequan" point="5" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Ảnh CV</label>
                             <div class="col-sm-10">
                                 <span id="form-avatar" runat="server">
-                                    <input type='file' id="inputAnh" name="inputAnh"  required/><br/>
+                                    <input type='file' id="inputAnh" name="inputAnh" required/><br/>
                                     <img id="avatar1" src="#" alt="ảnh 3x4 cm" style="width:114px; height:152px;"
                                          point="5"/>
                                 </span>
@@ -89,13 +92,14 @@
                             <div class="col-sm-10"></div>
                             <div class="col-sm-2">
                                 <input type="hidden" id="ratePoint" name="ratePoint" value=""/>
-                                <a role="button" data-toggle="collapse"  href="#gioi_thieu_ban_than"  aria-controls="gioi_thieu_ban_than" ">Tiếp tục</a>
+                                <a role="button" data-toggle="collapse" href="#gioi_thieu_ban_than"
+                                   aria-controls="gioi_thieu_ban_than" ">Tiếp tục</a>
                                 </a>
                                  
                             </div>
                         </div>
                     </span>
-                </div>
-            </div>
         </div>
-      <!-- end div Thông tin cá nhân -->
+    </div>
+</div>
+<!-- end div Thông tin cá nhân -->
