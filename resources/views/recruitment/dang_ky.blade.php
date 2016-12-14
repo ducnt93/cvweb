@@ -16,14 +16,14 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label">Tên đăng nhập<span class="required_input">(*)</span> : </label>
                 <div class="col-sm-9">
-                    <input type="text" id="inputTenDangNhap" name="inputTenDangNhap" class="form-control required">
+                    {{Form::text('inputTenDangNhap',null,['id' => 'inputTenDangNhap', 'class' => 'form-control required'])}}
                     <label for="inputTenDangNhap" class="error"></label>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-3 control-label">Mật khẩu<span class="required_input">(*)</span> : </label>
                 <div class="col-sm-9">
-                    <input type="password" id="inputMatKhau" name="inputMatKhau" class="form-control required">
+                    {{Form::password('inputMatKhau', ['class' => 'form-control required', 'id' => 'inputMatKhau'])}}
                     <label for="inputMatKhau" class="error"></label>
                 </div>
             </div>
@@ -31,8 +31,7 @@
                 <label class="col-sm-3 control-label">Xác nhận mật khẩu<span class="required_input">(*)</span> :
                 </label>
                 <div class="col-sm-9">
-                    <input type="password" id="inputMatKhauConfirm" name="inputMatKhauConfirm"
-                           class="form-control required">
+                    {{Form::password('inputMatKhauConfirm', ['class' => 'form-control required', 'id' => 'inputMatKhauConfirm'])}}
                     <label for="inputMatKhauConfirm" class="error"></label>
                 </div>
             </div>

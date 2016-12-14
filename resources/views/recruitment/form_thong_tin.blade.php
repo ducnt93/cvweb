@@ -13,7 +13,7 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             @include('message.notification')
             <form action="" method="POST" enctype="multipart/form-data" id="form-user" class="form-horizontal">
-                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                {{Form::token()}}
                 <h3>Thông tin cá nhân</h3>
                 <section>
                     <div class="panel-group" id="accordion_section1">
