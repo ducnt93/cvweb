@@ -27,9 +27,7 @@ $(document).ready(function () {
     }
 
     // Ngay sinh
-    $('#inputNgaysinh').on('focus', function () {
-        showDateNgaySinh('inputNgaysinh');
-    });
+    showDateNgaySinh('inputNgaysinh');
 
     // when click icon calender
     $('#btn_inputNgaySinh').click(function () {
@@ -38,9 +36,7 @@ $(document).ready(function () {
     //End ngay sinh
 
     // Nam nhap hoc
-    $('input[name="inputNamNhapHoc[]"]').on('focus', function () {
-        showDateNgaySinh('inputNamNhapHoc[]');
-    });
+    showDateNgaySinh('inputNamNhapHoc[]');
 
     // when click icon calender
     $('#btn_nam_nhap_hoc').click(function () {
@@ -49,9 +45,7 @@ $(document).ready(function () {
     // End nam nhap hoc
 
     // Nam tot nghiep
-    $('input[name="inputNamTotNghiep[]"]').on('focus', function () {
-        showDateNgaySinh('inputNamTotNghiep[]');
-    });
+    showDateNgaySinh('inputNamTotNghiep[]');
 
     // when click icon calender
     $('#btn_nam_tot_nghiep').click(function () {
@@ -60,9 +54,7 @@ $(document).ready(function () {
     // End nam tot nghiep
 
     // Bat dau du an
-    $('input[name="inputThoiGianBatDau[]"]').on('focus', function () {
-        showDateNgaySinh('inputThoiGianBatDau[]');
-    });
+    showDateNgaySinh('inputThoiGianBatDau[]');
 
     // when click icon calender
     $('#btn_inputThoiGianBatDau').click(function () {
@@ -71,9 +63,7 @@ $(document).ready(function () {
     // End bat dau du an
 
     // Ket thuc du an
-    $('input[name="inputThoiGianKetThuc[]"]').on('focus', function () {
-        showDateNgaySinh('inputThoiGianKetThuc[]');
-    });
+    showDateNgaySinh('inputThoiGianKetThuc[]');
 
     // when click icon calender
     $('#btn_inputThoiGianKetThuc').click(function () {
@@ -82,10 +72,7 @@ $(document).ready(function () {
     // Ket thuc du an
 
     // Bat dau kinh nghiem
-    $('input[name="inputTime_begin_du_an[]"]').on('focus', function () {
-        showDateNgaySinh('inputTime_begin_du_an[]');
-    });
-
+    showDateNgaySinh('inputTime_begin_du_an[]');
     // when click icon calender
     $('#btn_inputTime_begin_du_an').click(function () {
         showDateWithFocus('inputTime_begin_du_an[]');
@@ -93,9 +80,7 @@ $(document).ready(function () {
     // Ket thuc du an
 
     // Ket thuc du an
-    $('input[name="inputTime_end_du_an[]"]').on('focus', function () {
-        showDateNgaySinh('inputTime_end_du_an[]');
-    });
+    showDateNgaySinh('inputTime_end_du_an[]');
 
     // when click icon calender
     $('#btn_inputTime_end_du_an').click(function () {

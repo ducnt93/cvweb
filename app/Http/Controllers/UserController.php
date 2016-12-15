@@ -32,30 +32,64 @@ class UserController extends Controller
 
     public function recruitmentPost(UserRequest $request)
     {
-        dd(Input::all());
+        //dd(Input::all());
         $user = new User;
-        if ($request->hasFile('inputAnh')) {
-            $file = $request->file('inputAnh');
-            $duoi = $file->getClientOriginalExtension();
-            if ($duoi != 'jpg' && $duoi != 'png' && $duoi != 'jpeg')
-                return redirect('/')->with('loianh', 'ko dung dinh dang jpg, png, jpeg');
-            $name = $file->getClientOriginalName();
+        echo "thong tin ca nhan:<br>";
+        echo $request->inputHo;
+        $user->name = $request->inputHo;
+        echo "<br>ngay sinh: ";
+        echo $request->inputNgaysinh;
+        $user->ngaysinh = $request->inputNgaysinh;
+        echo "<br>gioi tinh: ";
+        echo $request->inputGioitinh;
+        $user->gioitinh = $request->inputGioitinh;
+        echo "<br>dia chi: ";
+        echo $request->inputDiachi;
+        $user->diachi = $request->inputDiachi;
+        echo "<br>sdt: ";
+        echo $request->inputSdt;
+        $user->sdt = $request->inputSdt;
+        echo "<br>email: ";
+        echo $request->inputEmail;
+        $user->email = $request->inputEmail;
+        echo "<br>Que quan: ";
+        echo $request->inputQuequan;
+        $user->quequan = $request->inputQuequan;
+        echo "<br>anh: <pre>";
+        print_r($request->inputAnh);
+        if($request->hasFile('inputAnh')){
+            $file=$request->file('inputAnh');
+            $duoi=$file->getClientOriginalExtension();
+            if(strtolower($duoi)!='jpg' && strtolower($duoi)!='png' && strtolower($duoi)!='jpeg')
+                return redirect('/recruitment')->with('loianh','Ảnh không đúng định dạng jpg, png, jpeg.');
+            if($file->getSize()>1048576)
+                return redirect('/recruitment')->with('loianh','Kích thước ảnh quá lớn.');
+            $name=$file->getClientOriginalName();
             $ldate = date('Y_m_d_H_i_s');
-            $Hinh = $ldate . "_" . $name;
-            $file->move('public/upload/', $Hinh);
-            $user->anh = $Hinh;
-        } else
-            $user->anh = "";
-        //echo $request->tinhcach;
-
-        $user->tinhcach = $request->tinhcachbanthan;
-        $user->uocmo = $request->uocmo;
-        $user->khanangdacbiet = $request->khanang;
-        if ($request->lydo == null)
+            $Hinh=$ldate."_".$name;
+            $file->move('public/upload/',$Hinh);
+            $user->anh=$Hinh;
+        }else
+            $user->anh="";
+        if($request->inputTinhCachBanThan == null)
             $user->lydodennhat = '';
         else
-            $user->lydodennhat = $request->lydo;
-        $user->sothich = $request->sothichbanthan;
+            $user->tinhcach = $request->inputTinhCachBanThan;
+        if($request->inputUocMo == null)
+            $user->lydodennhat = '';
+        else
+            $user->uocmo = $request->inputUocMo;
+        if($request->inputKhaNang == null)
+            $user->lydodennhat = '';
+        else
+            $user->khanangdacbiet = $request->inputKhaNang;
+
+        if($request->inputLyDo == null)
+            $user->lydodennhat = '';
+        else
+            $user->lydodennhat = $request->inputLyDo;
+        $user->password = "123456";
+        $user->sothich=$request->inputSoThichBanThan;
         $user->save();
         ///cap nhat xong bang user 
 
@@ -66,19 +100,19 @@ class UserController extends Controller
         //print_r($request->truong_tot_nghiep);
         /* echo "test: <br>";
          print_r($request->truong_tot_nghiep);*/
-        if (isset($request->truong_tot_nghiep)) {
-            $biendem = count($request->truong_tot_nghiep);
+        if (isset($request->inputTruongTotNghiep)) {
+            $biendem = count($request->inputTruongTotNghiep);
             for ($i = 0; $i < $biendem; $i++) {
-                if ($request->truong_tot_nghiep[$i] != null && $request->nam_tot_nghiep[$i] != null) {
+                if ($request->inputTruongTotNghiep[$i] != null && $request->inputNamTotNghiep[$i] != null) {
                     $daihocdb = new DaiHoc();
                     $daihocdb->idUser = $findUser->id;
-                    $daihocdb->truong = $request->truong_tot_nghiep[$i];
-                    if (isset($request->nganh_tot_nghiep[$i]))
-                        $daihocdb->nganh = $request->nganh_tot_nghiep[$i];
+                    $daihocdb->truong = $request->inputTruongTotNghiep[$i];
+                    if (isset($request->inputNganhTotNghiep[$i]))
+                        $daihocdb->nganh = $request->inputNganhTotNghiep[$i];
                     else
                         $daihocdb->nganh = '';
-                    $daihocdb->namNH = $request->nam_nhap_hoc[$i];
-                    $daihocdb->namTN = $request->nam_tot_nghiep[$i];
+                    $daihocdb->namNH = $request->inputNamNhapHoc[$i];
+                    $daihocdb->namTN = $request->inputNamTotNghiep[$i];
                     $daihocdb->save();
                 }
             }
@@ -208,34 +242,49 @@ class UserController extends Controller
 
         $countkn = count($request->noilamviec);
         for ($i = 0; $i < $countkn; $i++) {
-            if ($request->noilamviec[$i] != null && $request->vitrilamviec[$i] != null) {
+            if ($request->inputNoiLamViec[$i] != null && $request->inputNoiLamViec[$i] != null) {
                 $knlv = new kynanglamviec;
                 $knlv->idUser = $findUser->id;
-                $knlv->noilamviec = $request->noilamviec[$i];
-                $knlv->vitri = $request->vitrilamviec[$i];
-                $knlv->thoigianbatdau = $request->thoigianbatdau[$i];
-                $knlv->thoigianketthuc = $request->thoigianketthuc[$i];
+                $knlv->noilamviec = $request->inputNoiLamViec[$i];
+                $knlv->vitri = $request->inputViTriLamViec[$i];
+                $knlv->thoigianbatdau = $request->inputThoiGianBatDau[$i];
+                $knlv->thoigianketthuc = $request->inputThoiGianKetThuc[$i];
                 $knlv->save();
             }
         }
 
         ///luu xong ky nang lam viec
         //luu du an tham gia
-        $countda = count($request->inputTen_du_an);
+        $countda = count($request->ten);
+        //dd($countda);
         for ($i = 0; $i < $countda; $i++) {
-            if ($request->inputTen_du_an[$i] != null && $request->inputTom_tat_du_an[$i] != null) {
-                $datg = new cacduanthamgia;
+            if ($request->ten[$i] != null && $request->ten[$i] != null) {
+                $datg = new CacDuAnThamGia();
+                /*$inputDATG = $request->only([
+                    'ten['.$i.']',
+                    'tomtat['.$i.']',
+                    'ngaybatdau['.$i.']',
+                    'ngayketthuc['.$i.']',
+                    'songuoi['.$i.']',
+                    'chitiet['.$i.']',
+                    'vaitro['.$i.']',
+                    'congvieccuthe['.$i.']',
+                    'moitruongpt['.$i.']',
+                    'ngonngusd['.$i.']',
+                ]);*/
+               // dd($inputDATG);
+                //$datg->fill($inputDATG);
                 $datg->idUser = $findUser->id;
-                $datg->ten = $request->inputTen_du_an[$i];
-                $datg->tomtat = $request->inputTom_tat_du_an[$i];
-                $datg->ngaybatdau = $request->inputTime_begin_du_an[$i];
-                $datg->ngayketthuc = $request->inputTime_end_du_an[$i];
-                $datg->songuoi = $request->inputSo_nguoi_du_an[$i];
-                $datg->chitiet = $request->inputChi_tiet_du_an[$i];
-                $datg->vaitro = $request->inputVai_tro_trong_du_an[$i];
-                $datg->congvieccuthe = $request->inputCongviec_cuthe_du_an[$i];
-                $datg->moitruongpt = $request->inputEnviroment_du_an[$i];
-                $datg->ngonngusd = $request->inputNgonngu_trong_du_an[$i];
+                $datg->ten = $request->ten[$i];
+                $datg->tomtat = $request->tomtat[$i];
+                $datg->ngaybatdau = $request->ngaybatdau[$i];
+                $datg->ngayketthuc = $request->ngayketthuc[$i];
+                $datg->songuoi = $request->songuoi[$i];
+                $datg->chitiet = $request->chitiet[$i];
+                $datg->vaitro = $request->vaitro[$i];
+                $datg->congvieccuthe = $request->congvieccuthe[$i];
+                $datg->moitruongpt = $request->moitruongpt[$i];
+                $datg->ngonngusd = $request->ngonngusd[$i];
                 $datg->save();
             }
         }

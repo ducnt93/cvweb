@@ -17,7 +17,6 @@
                 <h3>Thông tin cá nhân</h3>
                 <section>
                     <div class="panel-group" id="accordion_section1">
-                        @include('recruitment.dang_ky')
                         @include('recruitment.thong_tin_ca_nhan')
                     </div>
                 </section>
@@ -54,18 +53,18 @@
     </div>
 @endsection
 @section('script')
-    <script src="{{asset('/cv/js/user-search.js')}}"></script>
-    <script src="{{asset('/cv/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('/cv/js/jquery.steps.min.js')}}"></script>
-    <script src="{{asset('/cv/js/formValidation.min.js')}}"></script>
-    <script src="{{asset('/cv/js/additional-methods.min.js')}}"></script>
-    <script src="{{asset('/cv/js/user-form-validation.js')}}"></script>
-    <script src="{{asset('/cv/js/user-datepicker.js')}}"></script>
-    <script src="{{asset('/cv/js/function.js')}}"></script>
+    <script src="{{asset('/public/cv/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/formValidation.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/additional-methods.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/user-form-validation.js')}}"></script>
+    <script src="{{asset('/public/cv/js/user-datepicker.js')}}"></script>
+    <script src="{{asset('/public/cv/js/user-search.js')}}"></script>
+    <script src="{{asset('/public/cv/js/function.js')}}"></script>
     <script>
         $(document).ready(function () {
             $("html,body").animate({scrollTop: 215}, 500);
-            $('#inputTenDangNhap').focus();
+            $('#inputHo').focus();
 
             // Add icon for collapse
 

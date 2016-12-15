@@ -23,22 +23,20 @@
                                     <div class="form-group">
                                         <label for="inputTruongTotNghiep">Trường tốt nghiệp<span
                                                     class="required_input">(*)</span> :</label>
-                                        <input type="text" class="form-control"
-                                               name="inputTruongTotNghiep[]"/>
+                                        {{Form::text('inputTruongTotNghiep',null,['class' => 'form-control', 'name' => 'inputTruongTotNghiep[]'])}}
                                         <label for="inputTruongTotNghiep" class="error"></label>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputNganhTotNghiep">Ngành tốt nghiệp<span
                                                     class="required_input">(*)</span> :</label>
-                                        <input type="text" class="form-control"
-                                               placeholder="Áp dụng cho Đai học trở lên." name="inputNganhTotNghiep[]"/>
+                                        {{Form::text('inputNganhTotNghiep',null,['class' => 'form-control', 'name' => 'inputNganhTotNghiep[]','placeholder' =>'Áp dụng cho Đai học trở lên.'])}}
                                         <label for="inputNganhTotNghiep" class="error"></label>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputNamNhapHoc">Năm Nhập học<span
                                                     class="required_input">(*)</span> :</label>
                                         <div class='input-group date'>
-                                            <input type="text" class="form-control" name="inputNamNhapHoc[]"/>
+                                            {{Form::text('inputNamNhapHoc',null,['class' => 'form-control', 'name' => 'inputNamNhapHoc[]'])}}
                                             <span class="input-group-addon" id="btn_nam_nhap_hoc">
                                              <span class="glyphicon glyphicon-calendar"></span>
                                          </span>
@@ -49,8 +47,7 @@
                                         <label for="inputNamTotNghiep">Năm tốt nghiệp<span
                                                     class="required_input">(*)</span> :</label>
                                         <div class='input-group date'>
-                                            <input type="text" class="form-control"
-                                                   name="inputNamTotNghiep[]"/>
+                                            {{Form::text('inputNamTotNghiep',null,['class' => 'form-control', 'name' => 'inputNamTotNghiep[]'])}}
                                             <span class="input-group-addon" id="btn_nam_tot_nghiep">
                                              <span class="glyphicon glyphicon-calendar"></span>
                                          </span>
@@ -74,26 +71,26 @@
                 <div class="col-sm-10">
                     <label data-toggle="collapse" data-target="#collapseTiengAnh" aria-expanded="false"
                            aria-controls="collapseTiengAnh" style="padding-left:5px;">
-                        <input name="inputNgoaiNgu[]" value="anh" type="checkbox"/> Tiếng Anh
+                        <input name="ngoaingu[]" value="anh" type="checkbox"/> Tiếng Anh
                     </label>
                     <label data-toggle="collapse" data-target="#collapseTiengNhat" aria-expanded="false"
                            aria-controls="collapseTiengNhat" style="padding-left:5px;">
-                        <input name="inputNgoaiNgu[]" value="nhat" type="checkbox"/> Tiếng Nhật
+                        <input name="ngoaingu[]" value="nhat" type="checkbox"/> Tiếng Nhật
                     </label>
                     <label data-toggle="collapse" data-target="#collapseTiengTrung" aria-expanded="false"
                            aria-controls="collapseTiengTrung" style="padding-left:5px;">
-                        <input name="inputNgoaiNgu[]" value="trung" type="checkbox"/> Tiếng Trung
+                        <input name="ngoaingu[]" value="trung" type="checkbox"/> Tiếng Trung
                     </label>
 
                     <div id="collapseTiengAnh" aria-expanded="false" class="collapse">
                         <div class="well">
                             <label data-toggle="collapse" data-target="#collapseToiec" aria-expanded="false"
                                    aria-controls="collapseToiec" style="padding-left:5px;">
-                                <input type="checkbox" name="inputAnh[]" value="TOIEC"/> TOIEC
+                                <input type="checkbox" name="anh[]" value="TOIEC"/> TOIEC
                             </label>
                             <div id="collapseToiec" aria-expanded="false" class="collapse">
                                 <label for="Toiec">Chứng chỉ TOIEC</label>
-                                <select class="form-control" id="Toiec" name="inputTOIEC">
+                                <select class="form-control" id="Toiec" name="TOIEC">
                                     <option value="450">450</option>
                                     <option value="500">500</option>
                                     <option value="550">550</option>
@@ -108,11 +105,11 @@
                             </div>
                             <label data-toggle="collapse" data-target="#collapseIelts" aria-expanded="false"
                                    aria-controls="collapseIelts" style="padding-left:5px;">
-                                <input type="checkbox" name="inputAnh[]" value="IELTS"/> IELTS
+                                <input type="checkbox" name="anh[]" value="IELTS"/> IELTS
                             </label>
                             <div id="collapseIelts" aria-expanded="false" class="collapse">
                                 <label for="Ielts">Chứng chỉ IELTS</label>
-                                <select class="form-control" id="Ielts" name="inputIELTS">
+                                <select class="form-control" id="Ielts" name="IELTS">
                                     <option value="5.0">5.0</option>
                                     <option value="5.5">5.5</option>
                                     <option value="6.0">6.0</option>
@@ -126,11 +123,11 @@
                             </div>
                             <label data-toggle="collapse" data-target="#collapseToefl" aria-expanded="false"
                                    aria-controls="collapseToefl" style="padding-left:5px;">
-                                <input type="checkbox" value="TOEFL" name="inputAnh[]"/> TOEFL
+                                <input type="checkbox" value="TOEFL" name="anh[]"/> TOEFL
                             </label>
                             <div id="collapseToefl" aria-expanded="false" class="collapse">
                                 <label for="Toefl">Chứng chỉ TOEFL iBT</label>
-                                <select class="form-control" id="Toefl" name="inputTOEFL">
+                                <select class="form-control" id="Toefl" name="TOEFL">
                                     <option value="32 - 34">32 - 34</option>
                                     <option value="35 - 45">35 - 45</option>
                                     <option value="46 - 59">46 - 59</option>
@@ -145,11 +142,11 @@
                             </div>
                             <label data-toggle="collapse" data-target="#collapseCefr" aria-expanded="false"
                                    aria-controls="collapseCefr" style="padding-left:5px;">
-                                <input type="checkbox" name="inputAnh[]" value="CEFR"/> Chuẩn Châu Âu
+                                <input type="checkbox" name="anh[]" value="CEFR"/> Chuẩn Châu Âu
                             </label>
                             <div id="collapseCefr" aria-expanded="false" class="collapse">
                                 <label for="Ceft">CEFR</label>
-                                <select class="form-control" id="Ceft" name="inputCEFR">
+                                <select class="form-control" id="Ceft" name="CEFR">
                                     <option value="A1">A1</option>
                                     <option value="A2">A2</option>
                                     <option value="B1">B1</option>
@@ -163,15 +160,15 @@
                     <div id="collapseTiengNhat" aria-expanded="false" class="collapse">
                         <div class="well">
                             <div class="col-sm-4">
-                                <label><input type="radio" name="inputNhat" value="N1"/> N1 </label><br>
-                                <label><input type="radio" name="inputNhat" value="N2"/> N2</label>
+                                <label><input type="radio" name="nhat" value="N1"/> N1 </label><br>
+                                <label><input type="radio" name="nhat" value="N2"/> N2</label>
                             </div>
                             <div class="col-sm-4">
-                                <label><input type="radio" name="inputNhat" value="N3"/> N3</label> <br>
-                                <label><input type="radio" name="inputNhat" value="N4"/> N4</label>
+                                <label><input type="radio" name="nhat" value="N3"/> N3</label> <br>
+                                <label><input type="radio" name="nhat" value="N4"/> N4</label>
                             </div>
                             <div class="col-sm-4">
-                                <label><input type="radio" name="inputNhat" value="N5"/> N5</label> <br>
+                                <label><input type="radio" name="nhat" value="N5"/> N5</label> <br>
                             </div>
 
                             <div class="clearfix"></div>
@@ -180,15 +177,15 @@
                     <div id="collapseTiengTrung" aria-expanded="false" class="collapse">
                         <div class="well">
                             <div class="col-sm-4">
-                                <label><input type="radio" name="inputTrung" value="HSK1"/> HSK1 </label><br>
-                                <label><input type="radio" name="inputTrung" value="HSK2"/> HSK2</label>
+                                <label><input type="radio" name="trung" value="HSK1"/> HSK1 </label><br>
+                                <label><input type="radio" name="trung" value="HSK2"/> HSK2</label>
                             </div>
                             <div class="col-sm-4">
-                                <label><input type="radio" name="inputTrung" value="HSK3"/> HSK3</label> <br>
-                                <label><input type="radio" name="inputTrung" value="HSK4"/> HSK4</label>
+                                <label><input type="radio" name="trung" value="HSK3"/> HSK3</label> <br>
+                                <label><input type="radio" name="trung" value="HSK4"/> HSK4</label>
                             </div>
                             <div class="col-sm-4">
-                                <label><input type="radio" name="inputTrung" value="HSK5"/> HSK5</label> <br>
+                                <label><input type="radio" name="trung" value="HSK5"/> HSK5</label> <br>
                             </div>
 
                             <div class="clearfix"></div>

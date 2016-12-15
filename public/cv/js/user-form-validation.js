@@ -46,16 +46,7 @@ $(document).ready(function () {
         },
         rules: {
             // Thong tin ca nhan
-            inputTenDangNhap: "required",
-            inputMatKhau: {
-                required: true,
-                minlength: 1
-            },
-            inputMatKhauConfirm: {
-                required: true,
-                minlength: 1,
-                equalTo: "#inputMatKhau"
-            },
+
             inputHo: "required",
             inputNgaysinh: "required",
             inputSdt: {
@@ -82,16 +73,7 @@ $(document).ready(function () {
         },
         messages: {
             // Thong tin ca nhan
-            inputTenDangNhap: "Tên đăng nhập không được để trống.",
-            inputMatKhau: {
-                required: "Mật khẩu không được để trống.",
-                minlength: "Mật khẩu phải dài hơn 8 ký tự."
-            },
-            inputMatKhauConfirm: {
-                required: "Xác nhận mật khẩu không được để trống.",
-                minlength: "Mật khẩu phải dài hơn 8 ký tự.",
-                equalTo: "Mật khẩu không khớp.",
-            },
+
             inputHo: "Họ tên không được để trống.",
             inputQueQuan: "Quê quán không được để trống.",
             inputNgaysinh: "Ngày sinh không được để trống.",

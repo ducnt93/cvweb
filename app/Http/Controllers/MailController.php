@@ -33,7 +33,7 @@ class MailController extends Controller
             $message->attach('public\file\cv_' . $GLOBALS['ppto'] . '.docx');
             $message->from('dovanhungcis@gmail.com', 'Portgas D. Ace');
         });
-        return redirect('/')->with('thongbaothanhcong', 'Đã gửi thành công.');
+        return redirect('/recruitment')->with('thongbaothanhcong', 'Đã gửi thành công.');
     }
     //tao function send mail
 

@@ -19,25 +19,20 @@
                         <span class="form-horizontal">
                             <div class="form-group">
                                 <label for="inputNoiLamViec">Nơi làm việc: </label>
-                                <input type="text" class="form-control" name="inputNoiLamViec[]"
-                                       placeholder="Công ty A"/>
+                                {{Form::text('inputNoiLamViec',null,['class' => 'form-control', 'name' => 'inputNoiLamViec[]', 'placeholder' => 'Công ty A'])}}
                             </div>
                             <div class="form-group">
                                 <label for="inputViTriLamViec">Vị trí làm việc: </label>
-                                <input type="text" class="form-control" name="inputViTriLamViec[]"
-                                       placeholder="Thực tập sinh"/>
+                                {{Form::text('inputViTriLamViec',null,['class' => 'form-control', 'name' => 'inputViTriLamViec[]', 'placeholder' => 'Thực tập sinh'])}}
                             </div>
                             <div class="form-group">
                                 <label for="inputMoTaCongViec">Mô tả công việc: </label>
-                                <textarea row="5" class="form-control"
-                                          name="inputMoTaCongViec[]"
-                                          placeholder="Training về jQuery và Bootstrap..."></textarea>
+                                {{Form::textarea('inputMoTaCongViec',null,['row' => '5','class' => 'form-control', 'name' => 'inputMoTaCongViec[]', 'placeholder' => 'Training về jQuery và Bootstrap...'])}}
                             </div>
                             <div class="form-group">
                                 <label for="inputThoiGianBatDau">Thời gian bắt đầu: </label>
                                 <div class="input-group date">
-                                    <input type="text" class="form-control"
-                                           name="inputThoiGianBatDau[]"/>
+                                    {{Form::text('inputThoiGianBatDau',null,['class' => 'form-control', 'name' => 'inputThoiGianBatDau[]'])}}
                                     <span class="input-group-addon" id="btn_inputThoiGianBatDau">
                                              <span class="glyphicon glyphicon-calendar"></span></span>
                                 </div>
@@ -45,8 +40,7 @@
                             <div class="form-group">
                                 <label for="inputThoiGianKetThuc">Thời gian kết thúc: </label>
                                 <div class="input-group date">
-                                    <input type="text" class="form-control"
-                                           name="inputThoiGianKetThuc[]"/>
+                                    {{Form::text('inputThoiGianKetThuc',null,['class' => 'form-control', 'name' => 'inputThoiGianKetThuc[]'])}}
                                     <span class="input-group-addon" id="btn_inputThoiGianKetThuc">
                                              <span class="glyphicon glyphicon-calendar"></span>
                                          </span>

@@ -3,14 +3,14 @@
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
             <label>
-                <a class="accordion-toggle" data-toggle="collapse" href="#thong_tin_ca_nhan"
+                <a class="accordion-toggle" data-toggle="collapse" href="#thong_tin_ca_nhan"  aria-expanded="true"
                    data-parent="#accordion_section1" aria-controls="thong_tin_ca_nhan" style="color:white;">1.2.Thông
                     tin cá nhân</a>
                 <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
             </label>
         </h4>
     </div>
-    <div id="thong_tin_ca_nhan" class="panel-collapse collapse">
+    <div id="thong_tin_ca_nhan" class="panel-collapse collapse in">
         <div class="panel-body">
                     <span class="form-horizontal">
                         <div class="form-group">
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputNgaysinh" class="col-sm-2 control-label">Ngày sinh<span
+                            <label for="" class="col-sm-2 control-label">Ngày sinh<span
                                         class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
                                 <div class='input-group date'>

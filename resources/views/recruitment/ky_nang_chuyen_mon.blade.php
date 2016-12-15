@@ -20,7 +20,7 @@
                         <label class="col-sm-3" data-toggle="collapse" data-target="#collapse{{$cn->id}}"
                                aria-expanded="false"
                                aria-controls="collapse{{$cn->id}}" style="padding-left:5px;">
-                            <input type="checkbox" name="inputOS[]" value="{{$cn->tenchuyenmon}}"/> {{$cn->tenchuyenmon}}
+                            <input type="checkbox" name="os[]" value="{{$cn->tenchuyenmon}}"/> {{$cn->tenchuyenmon}}
                         </label>
                         <?php endif ?>
 
@@ -33,7 +33,7 @@
                             <div class="well">
                                 <div class="form-group">
                                     <label for="">Thời gian kinh nghiệm với {{$cn->tenchuyenmon}}</label>
-                                    <select class="form-control" id="" name="input{{changeTitle($cn->tenchuyenmon)}}">
+                                    <select class="form-control" id="" name="{{changeTitle($cn->tenchuyenmon)}}">
                                         <option value="Chưa có kinh nghiệm">Chưa có kinh nghiệm</option>
                                         <option value="01 - 03 tháng">01 - 03 tháng</option>
                                         <option value="03 - 06 tháng">03 - 06 tháng</option>
@@ -63,7 +63,7 @@
                         <label class="col-sm-3" data-toggle="collapse" data-target="#collapse{{$cn->id}}"
                                aria-expanded="false"
                                aria-controls="collapseMsAccess" style="padding-left:5px;">
-                            <input type="checkbox" value="{{$cn->tenchuyenmon}}" name="inputDB[]"/> {{$cn->tenchuyenmon}}
+                            <input type="checkbox" value="{{$cn->tenchuyenmon}}" name="db[]"/> {{$cn->tenchuyenmon}}
                         </label>
                         <?php endif ?>
 
@@ -76,7 +76,7 @@
                             <div class="well">
                                 <div class="form-group">
                                     <label for="">Thời gian kinh nghiệm với {{$cn->tenchuyenmon}}</label>
-                                    <select class="form-control" id="" name="input{{changeTitle($cn->tenchuyenmon)}}">
+                                    <select class="form-control" id="" name="{{changeTitle($cn->tenchuyenmon)}}">
                                         <option value="Chưa có kinh nghiệm">Chưa có kinh nghiệm</option>
                                         <option value="01 - 03 tháng">01 - 03 tháng</option>
                                         <option value="03 - 06 tháng">03 - 06 tháng</option>
@@ -107,7 +107,7 @@
                         <label class="col-sm-3" data-toggle="collapse" data-target="#collapse{{$cn->id}}"
                                aria-expanded="false"
                                aria-controls="collapseMsAccess" style="padding-left:5px;">
-                            <input type="checkbox" value="{{$cn->tenchuyenmon}}" name="inputIDE[]"/> {{$cn->tenchuyenmon}}
+                            <input type="checkbox" value="{{$cn->tenchuyenmon}}" name="ide[]"/> {{$cn->tenchuyenmon}}
                         </label>
                         <?php endif ?>
 
@@ -120,7 +120,7 @@
                             <div class="well">
                                 <div class="form-group">
                                     <label for="">Thời gian kinh nghiệm với {{$cn->tenchuyenmon}}</label>
-                                    <select class="form-control" id="" name="input{{changeTitle($cn->tenchuyenmon)}}">
+                                    <select class="form-control" id="" name="{{changeTitle($cn->tenchuyenmon)}}">
                                         <option value="Chưa có kinh nghiệm">Chưa có kinh nghiệm</option>
                                         <option value="01 - 03 tháng">01 - 03 tháng</option>
                                         <option value="03 - 06 tháng">03 - 06 tháng</option>
@@ -150,7 +150,7 @@
                         <label class="col-sm-3" data-toggle="collapse" data-target="#collapse{{$cn->id}}"
                                aria-expanded="false"
                                aria-controls="collapseMsAccess" style="padding-left:5px;">
-                            <input type="checkbox" value="{{$cn->tenchuyenmon}}" name="inputWEB[]"/> {{$cn->tenchuyenmon}}
+                            <input type="checkbox" value="{{$cn->tenchuyenmon}}" name="web[]"/> {{$cn->tenchuyenmon}}
                         </label>
                         <?php endif ?>
 
@@ -163,7 +163,7 @@
                             <div class="well">
                                 <div class="form-group">
                                     <label for="">Thời gian kinh nghiệm với {{$cn->tenchuyenmon}}</label>
-                                    <select class="form-control" id="" name="input{{changeTitle($cn->tenchuyenmon)}}">
+                                    <select class="form-control" id="" name="{{changeTitle($cn->tenchuyenmon)}}">
                                         <option value="Chưa có kinh nghiệm">Chưa có kinh nghiệm</option>
                                         <option value="01 - 03 tháng">01 - 03 tháng</option>
                                         <option value="03 - 06 tháng">03 - 06 tháng</option>
@@ -189,13 +189,13 @@
                 <div class="col-sm-10">
                     <div class="row">
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputVPhong[]" value="MsWord" type="checkbox"/> MsWord
+                            <input name="vphong[]" value="MsWord" type="checkbox"/> MsWord
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputVPhong[]" value="MsExcel" type="checkbox"/> MsExcel
+                            <input name="vphong[]" value="MsExcel" type="checkbox"/> MsExcel
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputVPhong[]" value="MsPowerPoint" type="checkbox"/> MsPowerPoint
+                            <input name="vphong[]" value="MsPowerPoint" type="checkbox"/> MsPowerPoint
                         </label>
                     </div>
                     <div class="clearfix"></div>
@@ -206,26 +206,26 @@
                 <div class="col-sm-10">
                     <div class="row">
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="Hacking" type="checkbox"/> Hacking
+                            <input name="kthuckhac[]" value="Hacking" type="checkbox"/> Hacking
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="Bigdata" type="checkbox"/> Bigdata
+                            <input name="kthuckhac[]" value="Bigdata" type="checkbox"/> Bigdata
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="Git" type="checkbox"/> Git
+                            <input name="kthuckhac[]" value="Git" type="checkbox"/> Git
                         </label>
 
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="Machine Learning" type="checkbox"/> Machine Learning
+                            <input name="kthuckhac[]" value="Machine Learning" type="checkbox"/> Machine Learning
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="VMWare" type="checkbox"/> VMWare
+                            <input name="kthuckhac[]" value="VMWare" type="checkbox"/> VMWare
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="Docker" type="checkbox"/> Docker
+                            <input name="kthuckhac[]" value="Docker" type="checkbox"/> Docker
                         </label>
                         <label class="col-sm-3" style="padding-left:5px;">
-                            <input name="inputKThucKhac[]" value="Photoshop" type="checkbox"/> Photoshop
+                            <input name="kthuckhac[]" value="Photoshop" type="checkbox"/> Photoshop
                         </label>
                     </div>
 
