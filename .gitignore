@@ -2,6 +2,8 @@ vendor/
 node_modules/
 .idea/
 composer.lock
+public/upload/
+public/file/
 
 # Laravel 4 specific
 bootstrap/compiled.php

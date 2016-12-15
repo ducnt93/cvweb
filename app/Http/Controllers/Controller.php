@@ -12,25 +12,4 @@ use App\Models\SoThich;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function welcome()
-    {
-        $chuyennganh = KyNangChuyenMon::all();
-        $sothich = SoThich::all();
-        $viewData = [
-            'chuyennganh' => $chuyennganh,
-            'sothich' => $sothich
-        ];
-        return view('recruitment.form_thong_tin', $viewData);
-    }
-
-    public function themkn()
-    {
-
-    }
-
-    public function themda()
-    {
-
-    }
 }
