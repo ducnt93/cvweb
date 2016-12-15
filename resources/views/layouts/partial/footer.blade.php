@@ -72,12 +72,11 @@
         </div>
     </div>
 </div>
-</body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="{{asset('/js/jquery.min.js')}}"></script>
-<script src="{{asset('/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('/cv/js/bootstrap-datepicker.min.js')}}"></script>
-<script src="{{asset('/cv/js/bootstrap-select.min.js')}}"></script>
-<script src="{{asset('/cv/js/function.js')}}"></script>
+<script src="{{asset('/public/js/jquery.min.js')}}"></script>
+<script src="{{asset('/public/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/public/cv/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{asset('/public/cv/js/bootstrap-select.min.js')}}"></script>
 @yield('script')
+</body>
 </html>

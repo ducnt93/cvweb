@@ -3,12 +3,13 @@
     <div class="panel-heading" role="tab" id="headingFive">
         <h4 class="panel-title">
             <label>
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#chuyen_mon"
-                   aria-expanded="false" aria-controls="chuyen_mon" style="color:white;">Kỹ năng chuyên môn</a>
+                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion_section3" href="#chuyen_mon"
+                   aria-expanded="true" aria-controls="chuyen_mon" style="color:white;">3.1.Kỹ năng chuyên môn</a>
+                <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
             </label>
         </h4>
     </div>
-    <div id="chuyen_mon" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+    <div id="chuyen_mon" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
         <div class="panel-body">
             <div class="form-group row">
                 <label class="col-sm-2 control-label">Kiến thức kinh nghiệm về OS</label>
@@ -229,15 +230,6 @@
                     </div>
 
                     <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10"></div>
-                <div class="col-sm-2">
-
-                    <a role="button" data-toggle="collapse" href="#kinh_nghiem_lam_viec"
-                       aria-controls="gioi_thieu_ban_than">Tiếp tục</a>
-
                 </div>
             </div>
         </div>

@@ -3,32 +3,38 @@
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
             <label>
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#thong_tin_ca_nhan"
-                   aria-expanded="true" aria-controls="thong_tin_ca_nhan" style="color:white;">Thông tin cá nhân</a>
+                <a class="accordion-toggle" data-toggle="collapse" href="#thong_tin_ca_nhan"  aria-expanded="true"
+                   data-parent="#accordion_section1" aria-controls="thong_tin_ca_nhan" style="color:white;">1.2.Thông
+                    tin cá nhân</a>
+                <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
             </label>
         </h4>
     </div>
-    <div id="thong_tin_ca_nhan" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="thong_tin_ca_nhan" class="panel-collapse collapse in">
         <div class="panel-body">
                     <span class="form-horizontal">
                         <div class="form-group">
-                            <label for="inputHo" class="col-sm-2 control-label" lang="jp">Họ và tên：</label>
+                            <label for="inputHo" class="col-sm-2 control-label" lang="jp">Họ và tên<span
+                                        class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputHo"
+                                <input type="text" class="form-control required" id="inputHo"
                                        placeholder="Đỗ Văn A"
-                                       name="inputHo" point="10" value="{{ old('inputHo') }}">
-                                <div class="output" id="inputHo_output" lang="jp"></div>
+                                       name="inputHo" point="10">
+                                <label for="inputHo" class="error"></label>
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <label for="inputNgaysinh" class="col-sm-2 control-label">Ngày sinh</label>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">Ngày sinh<span
+                                        class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
                                 <div class='input-group date'>
-                                    <input type='text' class="form-control" id='inputNgaysinh' name="inputNgaysinh"/>
+                                    <input type='text' class="form-control required" id='inputNgaysinh'
+                                           name="inputNgaysinh"/>
                                     <span class="input-group-addon" id="btn_inputNgaySinh">
                                          <span class="glyphicon glyphicon-calendar"></span>
                                      </span>
                                 </div>
+                                <label for="inputNgaysinh" class="error"></label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -51,50 +57,51 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputDiachi" class="col-sm-2 control-label">Địa chỉ</label>
+                            <label for="inputDiachi" class="col-sm-2 control-label">Địa chỉ
+                                <span class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
-                                <input type="text" name="inputDiachi" class="form-control" placeholder="Duy Tân, Cầu Giấy, Hà Nội">
+                                <input type="text" name="inputDiachi" class="form-control required"
+                                       placeholder="Duy Tân, Cầu Giấy, Hà Nội">
+                                <label for="inputDiachi" class="error"></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputSdt" class="col-sm-2 control-label">Số điện thoại</label>
+                            <label for="inputSdt" class="col-sm-2 control-label">Số điện thoại<span
+                                        class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputSdt"
+                                <input type="text" class="form-control required" id="inputSdt"
                                        placeholder="Số máy di động hoặc số máy cố định" name="inputSdt" point="10">
+                                <label for="inputSdt" class="error"></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                            <label for="inputEmail" class="col-sm-2 control-label">Email<span
+                                        class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail"
+                                <input type="email" class="form-control required" id="inputEmail"
                                        placeholder="Nhập địa chỉ Email" name="inputEmail" point="10">
+                                 <label for="inputEmail" class="error"></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputQuequan" class="col-sm-2 control-label">Quê quán</label>
+                            <label for="inputQuequan" class="col-sm-2 control-label">Quê quán<span
+                                        class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputQuequan" placeholder="Ba Dinh, Ha Noi"
+                                <input type="text" class="form-control required" id="inputQuequan"
+                                       placeholder="Ba Dinh, Ha Noi"
                                        name="inputQuequan" point="5">
+                                <label for="inputQuequan" class="error"></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Ảnh CV</label>
+                            <label class="col-sm-2 control-label">Ảnh CV<span
+                                        class="required_input">(*)</span> :</label>
                             <div class="col-sm-10">
-                                <span id="form-avatar" runat="server">
-                                    <input type='file' id="inputAnh" name="inputAnh"/><br/>
-                                    <img id="avatar1" src="#" alt="ảnh 3x4 cm" style="width:114px; height:152px;"
-                                         point="5"/>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10"></div>
-                            <div class="col-sm-2">
-                                <input type="hidden" id="ratePoint" name="ratePoint" value=""/>
-                                <a role="button" data-toggle="collapse" href="#gioi_thieu_ban_than"
-                                   aria-controls="gioi_thieu_ban_than">Tiếp tục</a>
-                                </a>
-                                 
+                                <input type='file' id="inputAnh" name="inputAnh"/>
+                                <div id="showImg">
+                                    <img id="avatar1" src="#" alt="ảnh 3x4 cm"/>
+                                </div>
+                                 <label for="inputAnh" class="error"></label>
                             </div>
                         </div>
                     </span>

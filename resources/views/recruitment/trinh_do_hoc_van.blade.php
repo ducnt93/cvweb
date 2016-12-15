@@ -3,60 +3,67 @@
     <div class="panel-heading" role="tab" id="headingFour">
         <h4 class="panel-title">
             <label>
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                   href="#trinh_do_hoc_van" aria-expanded="false" aria-controls="trinh_do_hoc_van" style="color:white;">Trình
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_section2"
+                   href="#trinh_do_hoc_van" aria-controls="trinh_do_hoc_van" style="color:white;">2.3.Trình
                     độ học vấn</a>
+                <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
             </label>
         </h4>
     </div>
-    <div id="trinh_do_hoc_van" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+    <div id="trinh_do_hoc_van" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Trình độ học vấn</label>
                 <div class="col-sm-10">
-                        <span>
-                        <ol id="addRemoveHocVan">
-                            <li>
-                              <br/>
-                          <div class="form-group">
-                              <div class="well">
-                                  <div class="form-group">
-                                    <label for="truong_tot_nghiep">Trường tốt nghiệp:</label>
-                                    <input type="text" class="form-control" name="truong_tot_nghiep[]"/>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="nganh_tot_nghiep">Ngành tốt nghiệp:</label>
-                                    <input type="text" class="form-control"
-                                           placeholder="Áp dụng cho Đai học trở lên." name="nganh_tot_nghiep[]"/>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="nam_tot_nghiep">Năm Nhập học:</label>
-                                          <div class='input-group date'>
-                                          <input type="text" class="form-control" name="nam_nhap_hoc[]"/>
-                                       <span class="input-group-addon" id="btn_nam_nhap_hoc">
-                                         <span class="glyphicon glyphicon-calendar"></span>
-                                     </span>
-                                              </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="nam_tot_nghiep">Năm tốt nghiệp:</label>
-                                    <input type="month" class="form-control"
-                                           name="nam_tot_nghiep[]"/>
-                                  </div>
-                                  <div class="clearfix"></div>
-                              </div>
+                    <ol id="addRemoveHocVan">
+                        <li>
+                            <br/>
+                            <div class="well">
+                                <span class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputTruongTotNghiep">Trường tốt nghiệp<span
+                                                    class="required_input">(*)</span> :</label>
+                                        {{Form::text('inputTruongTotNghiep',null,['class' => 'form-control', 'name' => 'inputTruongTotNghiep[]'])}}
+                                        <label for="inputTruongTotNghiep" class="error"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputNganhTotNghiep">Ngành tốt nghiệp<span
+                                                    class="required_input">(*)</span> :</label>
+                                        {{Form::text('inputNganhTotNghiep',null,['class' => 'form-control', 'name' => 'inputNganhTotNghiep[]','placeholder' =>'Áp dụng cho Đai học trở lên.'])}}
+                                        <label for="inputNganhTotNghiep" class="error"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputNamNhapHoc">Năm Nhập học<span
+                                                    class="required_input">(*)</span> :</label>
+                                        <div class='input-group date'>
+                                            {{Form::text('inputNamNhapHoc',null,['class' => 'form-control', 'name' => 'inputNamNhapHoc[]'])}}
+                                            <span class="input-group-addon" id="btn_nam_nhap_hoc">
+                                             <span class="glyphicon glyphicon-calendar"></span>
+                                         </span>
+                                        </div>
+                                        <label for="inputNamNhapHoc" class="error"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputNamTotNghiep">Năm tốt nghiệp<span
+                                                    class="required_input">(*)</span> :</label>
+                                        <div class='input-group date'>
+                                            {{Form::text('inputNamTotNghiep',null,['class' => 'form-control', 'name' => 'inputNamTotNghiep[]'])}}
+                                            <span class="input-group-addon" id="btn_nam_tot_nghiep">
+                                             <span class="glyphicon glyphicon-calendar"></span>
+                                         </span>
+                                        </div>
+                                        <label for="inputNamTotNghiep" class="error"></label>
+                                    </div>
+                                </span>
+                            </div>
+                        </li>
+                    </ol>
+                    <nav aria-label="...">
+                        <ul class="pager">
+                            <li><a id="addHocVan" href="#trinh_do_hoc_van">Thêm</a></li>
 
-                          </div>
-                           </li>
-
-                          </ol>
-                          <nav aria-label="...">
-                            <ul class="pager">
-                              <li><a id="addHocVan" href="#trinh_do_hoc_van">Thêm</a></li>
-
-                            </ul>
-                          </nav>
-                        </span>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div class="form-group">
@@ -186,15 +193,8 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-10"></div>
-                <div class="col-sm-2">
-                    <input type="hidden" id="ratePoint" name="ratePoint" value=""/>
-                    <a role="button" data-toggle="collapse" href="#chuyen_mon" aria-controls="gioi_thieu_ban_than">Tiếp
-                        tục</a>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 <!-- end div Trình độ học vấn -->
+ 

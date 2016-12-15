@@ -11,34 +11,39 @@
 
         <!-- ---------------------------------------------- BEGIN main-infomation -------------------------------------------------- -->
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            @if(count($errors)>0)
-                <div class="alert alert-danger">
-                    @foreach($errors->all() as $err)
-                        {{$err}}<br>
-                    @endforeach
-                </div>
-            @endif
-            @if(session('thongbaothanhcong'))
-                <div class="alert alert-success" role="alert">
-                    <strong>Well done!</strong> Gửi thành công.
-                </div>
+            @include('message.notification')
+            <form action="" method="POST" enctype="multipart/form-data" id="form-user" class="form-horizontal">
+                {{Form::token()}}
+                <h3>Thông tin cá nhân</h3>
+                <section>
+                    <div class="panel-group" id="accordion_section1">
+                        @include('recruitment.thong_tin_ca_nhan')
+                    </div>
+                </section>
 
-            @endif
-            @if(session('loianh'))
-                <div class="alert alert-danger" role="alert">
-                    <strong>Lỗi!</strong> Sai định dạng ảnh.
-                </div>
-            @endif
-            <form action="" method="POST" enctype="multipart/form-data" id="form_user">
-                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                @include('recruitment.thong_tin_ca_nhan')
-                @include('recruitment.gioi_thieu_ban_than')
-                @include('recruitment.ly_do_den_nhat')
-                @include('recruitment.trinh_do_hoc_van')
-                @include('recruitment.ky_nang_chuyen_mon')
-                @include('recruitment.kinh_nghiem_lam_viec')
-                @include('recruitment.du_an_tham_gia')
+                <h3>Giới thiệu</h3>
+                <section>
+                    <div class="panel-group" id="accordion_section2">
+                        @include('recruitment.gioi_thieu_ban_than')
+                        @include('recruitment.ly_do_den_nhat')
+                        @include('recruitment.trinh_do_hoc_van')
+                    </div>
+                </section>
 
+                <h3>Kỹ năng</h3>
+                <section>
+                    <div class="panel-group" id="accordion_section3">
+                        @include('recruitment.ky_nang_chuyen_mon')
+                    </div>
+                </section>
+
+                <h3>Kinh nghiệm</h3>
+                <section>
+                    <div class="panel-group" id="accordion_section4">
+                        @include('recruitment.kinh_nghiem_lam_viec')
+                        @include('recruitment.du_an_tham_gia')
+                    </div>
+                </section>
             </form>
 
 
@@ -47,91 +52,35 @@
 
     </div>
 @endsection
-
 @section('script')
+    <script src="{{asset('/public/cv/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/jquery.steps.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/formValidation.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/additional-methods.min.js')}}"></script>
+    <script src="{{asset('/public/cv/js/user-form-validation.js')}}"></script>
+    <script src="{{asset('/public/cv/js/user-datepicker.js')}}"></script>
+    <script src="{{asset('/public/cv/js/user-search.js')}}"></script>
+    <script src="{{asset('/public/cv/js/function.js')}}"></script>
     <script>
         $(document).ready(function () {
-            var xTriggered = 0;
-            $("#target").keyup(function (event) {
-                var idTheLoai = $(this).val();
-                var res = idTheLoai.split(" ");
-                if (res[res.length - 1] == null || res[res.length - 1] == '') {
-                    // alert('asdasd');
-                    $.get('ajax/nothing', function (data) {
-                        //    alert(idTheLoai);
-                        $("#searchKQ").html(data);
-                    });
-                }
-                else {
-                    $.get('ajax/' + res[res.length - 1], function (data) {
-                        //    alert(idTheLoai);
-                        $("#searchKQ").html(data);
-                    });
-                }
-            }).keydown(function (event) {
-                if (event.which == 13) {
-                    event.preventDefault();
-                }
+            $("html,body").animate({scrollTop: 215}, 500);
+            $('#inputHo').focus();
+
+            // Add icon for collapse
+
+            $('#accordion_section1 .accordion-toggle').click(function (e) {
+                var chevState = $(e.target).siblings("i.indicator").toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+                $("i.indicator").not(chevState).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
             });
 
-            $("#other").click(function () {
-                $("#target").keyup();
+            $('#accordion_section2 .accordion-toggle').click(function (e) {
+                var chevState = $(e.target).siblings("i.indicator").toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+                $("i.indicator").not(chevState).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
             });
 
-            $("#searchKQtc").click(function () {
-                debugger
-                var tinhcach = document.getElementById("targettc").value;
-                var arr1 = tinhcach.split(",");
-                var arr = arr1.slice(0, arr1.length - 1);
-                tinhcach = '';
-                for (i = 0; i < arr.length; i++) {
-                    if (arr[i].trim() != null && arr[i].trim() != '') {
-                        tinhcach += arr[i].trim() + ', ';
-                    }
-                }
-                var kq = document.getElementById("kqtc").value;
-                if (kq.trim() != null && kq.trim() != '') {
-                    tinhcach += kq + ', ';
-                }
-                document.getElementById('targettc').value = tinhcach;
-            });
-            $("#targettc").keyup(function (event) {
-                var idTheLoai = $(this).val();
-                var res = idTheLoai.split(" ");
-                if (res[res.length - 1] == null || res[res.length - 1] == '') {
-                    // alert('asdasd');
-                    $.get('ajaxtc/nothing', function (data) {
-                        //    alert(idTheLoai);
-                        $("#searchKQtc").html(data);
-                    });
-                }
-                else {
-                    $.get('ajaxtc/' + res[res.length - 1], function (data) {
-                        //    alert(idTheLoai);
-                        $("#searchKQtc").html(data);
-                    });
-                }
-            }).keydown(function (event) {
-                if (event.which == 13) {
-                    event.preventDefault();
-                }
-            });
-
-
-            $("#searchKQ").click(function () {
-                var sothichcanhan = document.getElementById("target").value;
-                var arr1 = sothichcanhan.split(",");
-                var arr = arr1.slice(0, arr1.length - 1);
-                sothichcanhan = '';
-                for (i = 0; i < arr.length; i++) {
-                    if (arr[i].trim() != null && arr[i].trim() != '' || arr)
-                        sothichcanhan += arr[i].trim() + ', ';
-                }
-                var kq = document.getElementById("kqst").value;
-                if (kq.trim() != null && kq.trim() != '') {
-                    sothichcanhan += kq + ', ';
-                }
-                document.getElementById('target').value = sothichcanhan;
+            $('#accordion_section4 .accordion-toggle').click(function (e) {
+                var chevState = $(e.target).siblings("i.indicator").toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+                $("i.indicator").not(chevState).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
             });
 
             $("#addDu_an_thuc_te").change(function () {
@@ -144,49 +93,6 @@
                 $.get('themkn', function (data) {
                     $("#addremoveKinh_nghiem_lam_viec").html(data);
                 });
-            });
-
-            //datetimepicker nam sinh.
-            var date_input = $('input[name="inputNgaysinh"]');
-            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-            date_input.datepicker({
-                format: 'dd/mm/yyyy',
-                container: container,
-                todayHighlight: true,
-                autoclose: true,
-            });
-
-            //datetimepicker nam sinh.
-            var nam_nhap_hoc = $('input[name="nam_nhap_hoc[]"]');
-            nam_nhap_hoc.datepicker({
-                format: 'dd/mm/yyyy',
-                container: container,
-                todayHighlight: true,
-                autoclose: true,
-            });
-
-            $('#btn_inputNgaySinh').click(function () {
-                //datetimepicker nam sinh.
-                var date_input = $('input[name="inputNgaysinh"]');
-                var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-                date_input.datepicker({
-                    format: 'dd/mm/yyyy',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                }).focus();
-            });
-
-            $('#btn_nam_nhap_hoc').click(function () {
-                //datetimepicker nam sinh.
-                var date_input = $('input[name="nam_nhap_hoc[]"]');
-                var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-                date_input.datepicker({
-                    format: 'dd/mm/yyyy',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                }).focus();
             });
         });
     </script>
