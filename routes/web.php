@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', 'Controller@welcome');
 Route::post('luu','UserController@postLuu');
 //Route::get('themkn','Controller@themkn');
@@ -63,3 +64,11 @@ Route::group(['prefix'=>'admin'],function(){
  
 
 });*/
+=======
+Route::get('/recruitment', ['as' => 'user.recruitment', 'uses' => 'UserController@recruitment']);
+Route::post('/recruitment', ['as' => 'user.recruitmentPost', 'uses' => 'UserController@recruitmentPost']);
+Route::get('/ajax/{idTheLoai}', ['as' => 'user.search', 'uses' => 'SearchController@search']);
+Route::get('/ajaxtc/{idTheLoai}', ['as' => 'user.searchtc', 'uses' => 'SearchController@searchtc']);
+Route::get('html_email/{ppto}', ['as' => 'user.html_email', 'uses' => 'MailController@html_email']);
+Route::get('exp/{mail}', ['as' => 'user.xuatfile', 'uses' => 'UserController@xuatfile']);
+>>>>>>> 756af31529eb35abd000dcd25f62a8d3e5e1112d
