@@ -17,3 +17,9 @@ Route::get('/ajax/{idTheLoai}', ['as' => 'user.search', 'uses' => 'SearchControl
 Route::get('/ajaxtc/{idTheLoai}', ['as' => 'user.searchtc', 'uses' => 'SearchController@searchtc']);
 Route::get('html_email/{ppto}', ['as' => 'user.html_email', 'uses' => 'MailController@html_email']);
 Route::get('exp/{mail}', ['as' => 'user.xuatfile', 'uses' => 'UserController@xuatfile']);
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('trangadmin', 'admin\adminController@index');
+    Route::group(['prefix' => 'hoso'], function () {
+        Route::get('danhsachhoso', 'admin\adminController@danhsachhoso');
+    });
+});
