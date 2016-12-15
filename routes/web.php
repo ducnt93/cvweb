@@ -20,6 +20,12 @@ Route::get('/ajax/{idTheLoai}','SearchController@search');
 Route::get('/ajaxtc/{idTheLoai}','SearchController@searchtc');
 Route::get('html_email/{ppto}','MailController@html_email');
 Route::get('exp/{mail}','UserController@xuatfile');
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('trangadmin','admin\adminController@index');
+    Route::group(['prefix'=>'hoso'],function(){
+        Route::get('danhsachhoso','admin\adminController@danhsachhoso');
+    });
+});
 /*Route::get('test', function() {
 
     $phpWord = new \PhpOffice\PhpWord\PhpWord();
