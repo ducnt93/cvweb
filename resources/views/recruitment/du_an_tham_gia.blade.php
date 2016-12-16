@@ -21,13 +21,15 @@
                               <div class="form-group">
                                   <label for="inputTen_du_an" class="col-sm-3 control-label">Tên dự án</label>
                                   <div class="col-sm-9">
-                                      {{Form::text('ten',null,['class' => 'form-control', 'name' => 'ten[]'])}}
+                                      <input type="text" class="form-control"
+                                             name="ten[]" point=""/>
                                   </div>
                               </div> 
                               <div class="form-group">
                                   <label for="inputTom_tat_du_an" class="col-sm-3 control-label">Tóm tắt dự án</label>
                                   <div class="col-sm-9">
-                                      {{Form::text('tomtat',null,['class' => 'form-control', 'name' => 'tomtat[]'])}}
+                                      <input type="text" class="form-control"
+                                             name="tomtat[]" point=""/>
                                   </div>
                               </div>
                               <div class="form-group">
@@ -35,8 +37,9 @@
                                          class="col-sm-3 control-label">Ngày bắt đầu dự án</label>
                                   <div class="col-sm-9">
                                       <div class='input-group date'>
-                                          {{Form::text('ngaybatdau',null,['class' => 'form-control', 'name' => 'ngaybatdau[]'])}}
-                                          <span class="input-group-addon" id="btn_inputTime_begin_du_an">
+                                      <input type="text" class="form-control"
+                                             name="ngaybatdau[]" point=""/>
+                                           <span class="input-group-addon" id="btn_inputTime_begin_du_an">
                                          <span class="glyphicon glyphicon-calendar"></span>
                                      </span>
                                           </div>
@@ -47,8 +50,9 @@
                                          class="col-sm-3 control-label">Ngày kết thúc dự án</label>
                                   <div class="col-sm-9">
                                       <div class='input-group date'>
-                                          {{Form::text('ngayketthuc',null,['class' => 'form-control', 'name' => 'ngayketthuc[]'])}}
-                                          <span class="input-group-addon" id="btn_inputTime_end_du_an">
+                                      <input type="text" class="form-control"
+                                             name="ngayketthuc[]" point=""/>
+                                             <span class="input-group-addon" id="btn_inputTime_end_du_an">
                                          <span class="glyphicon glyphicon-calendar"></span>
                                      </span>
                                           </div>
@@ -57,38 +61,44 @@
                               <div class="form-group">
                                   <label for="inputSo_nguoi_du_an" class="col-sm-3 control-label">Số người tham gia dự án</label>
                                   <div class="col-sm-9">
-                                      {{Form::number('songuoi',null,['class' => 'form-control', 'name' => 'songuoi[]'])}}
+                                      <input type="number" min="1" class="form-control"
+                                             name="songuoi[]" point=""/>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputChi_tiet_du_an" class="col-sm-3 control-label">Mô tả chi tiết về dự án</label>
                                   <div class="col-sm-9">
-                                      {{Form::textarea('chitiet',null,['class' => 'form-control', 'name' => 'chitiet[]', 'row' => '5'])}}
+                                      <textarea row="5" class="form-control"
+                                                name="chitiet[]" point=""></textarea>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputVai_tro_trong_du_an" class="col-sm-3 control-label">Vai trò trong dự án</label>
                                   <div class="col-sm-9">
-                                      {{Form::textarea('vaitro',null,['class' => 'form-control', 'name' => 'vaitro[]', 'row' => '5'])}}
+                                      <textarea row="5" class="form-control"
+                                                name="vaitro[]" point=""></textarea>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputCongviec_cuthe_du_an"
                                          class="col-sm-3 control-label">Công việc cụ thể</label>
                                   <div class="col-sm-9">
-                                      {{Form::textarea('congvieccuthe',null,['class' => 'form-control', 'name' => 'congvieccuthe[]', 'row' => '5'])}}
+                                      <textarea row="5" class="form-control"
+                                                name="congvieccuthe[]" point=""></textarea>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputEnviroment_du_an" class="col-sm-3 control-label">Môi trường phát triển</label>
                                   <div class="col-sm-9">
-                                      {{Form::text('moitruongpt',null,['class' => 'form-control', 'name' => 'moitruongpt[]'])}}
+                                      <input type="text" class="form-control"
+                                             name="moitruongpt[]" point=""/>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputNgonngu_trong_du_an" class="col-sm-3 control-label">Ngôn ngữ được sử dụng</label>
                                   <div class="col-sm-9">
-                                      {{Form::text('ngonngusd',null,['class' => 'form-control', 'name' => 'ngonngusd[]'])}}
+                                      <input type="text" class="form-control"
+                                             name="ngonngusd[]" point=""/>
                                   </div>
                               </div>                                                                                             
                         </span>
