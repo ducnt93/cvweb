@@ -72,19 +72,19 @@ $(document).ready(function () {
     // Ket thuc du an
 
     // Bat dau kinh nghiem
-    showDateNgaySinh('inputTime_begin_du_an[]');
+    showDateNgaySinh('ngaybatdau[]');
     // when click icon calender
     $('#btn_inputTime_begin_du_an').click(function () {
-        showDateWithFocus('inputTime_begin_du_an[]');
+        showDateWithFocus('ngaybatdau[]');
     });
     // Ket thuc du an
 
     // Ket thuc du an
-    showDateNgaySinh('inputTime_end_du_an[]');
+    showDateNgaySinh('ngayketthuc[]');
 
     // when click icon calender
     $('#btn_inputTime_end_du_an').click(function () {
-        showDateWithFocus('inputTime_end_du_an[]');
+        showDateWithFocus('ngayketthuc[]');
     });
     // Ket thuc du an
 });
