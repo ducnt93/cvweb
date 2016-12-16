@@ -23,20 +23,22 @@
                                     <div class="form-group">
                                         <label for="inputTruongTotNghiep">Trường tốt nghiệp<span
                                                     class="required_input">(*)</span> :</label>
-                                        {{Form::text('inputTruongTotNghiep',null,['class' => 'form-control', 'name' => 'inputTruongTotNghiep[]'])}}
+                                        <input type="text" class="form-control"
+                                               name="inputTruongTotNghiep[]"/>
                                         <label for="inputTruongTotNghiep" class="error"></label>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputNganhTotNghiep">Ngành tốt nghiệp<span
                                                     class="required_input">(*)</span> :</label>
-                                        {{Form::text('inputNganhTotNghiep',null,['class' => 'form-control', 'name' => 'inputNganhTotNghiep[]','placeholder' =>'Áp dụng cho Đai học trở lên.'])}}
+                                        <input type="text" class="form-control"
+                                               placeholder="Áp dụng cho Đai học trở lên." name="inputNganhTotNghiep[]"/>
                                         <label for="inputNganhTotNghiep" class="error"></label>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputNamNhapHoc">Năm Nhập học<span
                                                     class="required_input">(*)</span> :</label>
                                         <div class='input-group date'>
-                                            {{Form::text('inputNamNhapHoc',null,['class' => 'form-control', 'name' => 'inputNamNhapHoc[]'])}}
+                                            <input type="text" class="form-control" name="inputNamNhapHoc[]"/>
                                             <span class="input-group-addon" id="btn_nam_nhap_hoc">
                                              <span class="glyphicon glyphicon-calendar"></span>
                                          </span>
@@ -47,7 +49,8 @@
                                         <label for="inputNamTotNghiep">Năm tốt nghiệp<span
                                                     class="required_input">(*)</span> :</label>
                                         <div class='input-group date'>
-                                            {{Form::text('inputNamTotNghiep',null,['class' => 'form-control', 'name' => 'inputNamTotNghiep[]'])}}
+                                            <input type="text" class="form-control"
+                                                   name="inputNamTotNghiep[]"/>
                                             <span class="input-group-addon" id="btn_nam_tot_nghiep">
                                              <span class="glyphicon glyphicon-calendar"></span>
                                          </span>
