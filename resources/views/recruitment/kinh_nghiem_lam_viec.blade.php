@@ -19,12 +19,12 @@
                         <span class="form-horizontal">
                             <div class="form-group">
                                 <label for="inputNoiLamViec">Nơi làm việc: </label>
-                                <input type="text" class="form-control" name="inputNoiLamViec[]"
+                                <input type="text" class="form-control1" name="inputNoiLamViec[]"
                                        placeholder="Công ty A"/>
                             </div>
                             <div class="form-group">
                                 <label for="inputViTriLamViec">Vị trí làm việc: </label>
-                                <input type="text" class="form-control" name="inputViTriLamViec[]"
+                                <input type="text" class="form-control1" name="inputViTriLamViec[]"
                                        placeholder="Thực tập sinh"/>
                             </div>
                             <div class="form-group">
@@ -36,7 +36,7 @@
                             <div class="form-group">
                                 <label for="inputThoiGianBatDau">Thời gian bắt đầu: </label>
                                 <div class="input-group date">
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control1"
                                            name="inputThoiGianBatDau[]"/>
                                     <span class="input-group-addon" id="btn_inputThoiGianBatDau">
                                              <span class="glyphicon glyphicon-calendar"></span></span>
@@ -45,7 +45,7 @@
                             <div class="form-group">
                                 <label for="inputThoiGianKetThuc">Thời gian kết thúc: </label>
                                 <div class="input-group date">
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control1"
                                            name="inputThoiGianKetThuc[]"/>
                                     <span class="input-group-addon" id="btn_inputThoiGianKetThuc">
                                              <span class="glyphicon glyphicon-calendar"></span>
