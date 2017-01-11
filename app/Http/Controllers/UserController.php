@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\User;
 use App\Models\SoThich;
 use App\Models\DaiHoc;
 use App\Models\NgoaiNgu;
