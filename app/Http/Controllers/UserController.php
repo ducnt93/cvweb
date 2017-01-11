@@ -89,6 +89,7 @@ class UserController extends Controller
         else
             $user->lydodennhat = $request->inputLyDo;
         $user->password = "123456";
+        $user->level = "123456";
         $user->sothich=$request->inputSoThichBanThan;
         $user->save();
         ///cap nhat xong bang user 

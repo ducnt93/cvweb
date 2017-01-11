@@ -21,14 +21,14 @@
                               <div class="form-group">
                                   <label for="inputTen_du_an" class="col-sm-3 control-label">Tên dự án</label>
                                   <div class="col-sm-9">
-                                      <input type="text" class="form-control"
+                                      <input type="text" class="form-control1"
                                              name="ten[]" point=""/>
                                   </div>
                               </div> 
                               <div class="form-group">
                                   <label for="inputTom_tat_du_an" class="col-sm-3 control-label">Tóm tắt dự án</label>
                                   <div class="col-sm-9">
-                                      <input type="text" class="form-control"
+                                      <input type="text" class="form-control1"
                                              name="tomtat[]" point=""/>
                                   </div>
                               </div>
@@ -37,7 +37,7 @@
                                          class="col-sm-3 control-label">Ngày bắt đầu dự án</label>
                                   <div class="col-sm-9">
                                       <div class='input-group date'>
-                                      <input type="text" class="form-control"
+                                      <input type="text" class="form-control1"
                                              name="ngaybatdau[]" point=""/>
                                            <span class="input-group-addon" id="btn_inputTime_begin_du_an">
                                          <span class="glyphicon glyphicon-calendar"></span>
@@ -50,7 +50,7 @@
                                          class="col-sm-3 control-label">Ngày kết thúc dự án</label>
                                   <div class="col-sm-9">
                                       <div class='input-group date'>
-                                      <input type="text" class="form-control"
+                                      <input type="text" class="form-control1"
                                              name="ngayketthuc[]" point=""/>
                                              <span class="input-group-addon" id="btn_inputTime_end_du_an">
                                          <span class="glyphicon glyphicon-calendar"></span>
@@ -61,7 +61,7 @@
                               <div class="form-group">
                                   <label for="inputSo_nguoi_du_an" class="col-sm-3 control-label">Số người tham gia dự án</label>
                                   <div class="col-sm-9">
-                                      <input type="number" min="1" class="form-control"
+                                      <input type="number" min="1" class="form-control1"
                                              name="songuoi[]" point=""/>
                                   </div>
                               </div>
@@ -90,14 +90,14 @@
                               <div class="form-group">
                                   <label for="inputEnviroment_du_an" class="col-sm-3 control-label">Môi trường phát triển</label>
                                   <div class="col-sm-9">
-                                      <input type="text" class="form-control"
+                                      <input type="text" class="form-control1"
                                              name="moitruongpt[]" point=""/>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="inputNgonngu_trong_du_an" class="col-sm-3 control-label">Ngôn ngữ được sử dụng</label>
                                   <div class="col-sm-9">
-                                      <input type="text" class="form-control"
+                                      <input type="text" class="form-control1"
                                              name="ngonngusd[]" point=""/>
                                   </div>
                               </div>                                                                                             
