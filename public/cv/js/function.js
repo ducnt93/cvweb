@@ -35,12 +35,12 @@ $(document).ready(function () {
             '<span class="form-horizontal">'+
             '<div class="form-group">'+
             '<label for="inputNoiLamViec">Nơi làm việc: </label>'+
-            '<input type="text" class="form-control" name="inputNoiLamViec[]"'+
+            '<input type="text" class="form-control1" name="inputNoiLamViec[]"'+
             'placeholder="Công ty A"/>'+
             '</div>'+
             '<div class="form-group">'+
             '<label for="inputViTriLamViec">Vị trí làm việc: </label>'+
-            '<input type="text" class="form-control" name="inputViTriLamViec[]"'+
+            '<input type="text" class="form-control1" name="inputViTriLamViec[]"'+
             'placeholder="Thực tập sinh"/>'+
             '</div>'+
             '<div class="form-group">'+
@@ -52,7 +52,7 @@ $(document).ready(function () {
             '<div class="form-group">'+
             '<label for="inputThoiGianBatDau">Thời gian bắt đầu: </label>'+
             '<div class="input-group date">'+
-            '<input type="date" class="form-control"'+
+            '<input type="date" class="form-control1"'+
             'name="inputThoiGianBatDau[]"/>'+
             '<span class="input-group-addon" id="btn_inputThoiGianBatDau">'+
             '<span class="glyphicon glyphicon-calendar"></span></span>'+
@@ -61,7 +61,7 @@ $(document).ready(function () {
             '<div class="form-group">'+
             '<label for="inputThoiGianKetThuc">Thời gian kết thúc: </label>'+
             '<div class="input-group date">'+
-            '<input type="date" class="form-control"'+
+            '<input type="date" class="form-control1"'+
             'name="inputThoiGianKetThuc[]"/>'+
             '<span class="input-group-addon" id="btn_inputThoiGianKetThuc">'+
             '<span class="glyphicon glyphicon-calendar"></span>'+
@@ -88,13 +88,13 @@ $(document).ready(function () {
             '<div class="form-group">' +
             '<label for="inputTen_du_an_4" class="col-sm-3 control-label">Tên dự án</label>' +
             '<div class="col-sm-9">' +
-            '<input type="text" class="form-control" id="inputTen_du_an_4" name="ten[]" point="">' +
+            '<input type="text" class="form-control1" id="inputTen_du_an_4" name="ten[]" point="">' +
             '</div>' +
             '</div> ' +
             '<div class="form-group">' +
             '<label for="inputTom_tat_du_an_4" class="col-sm-3 control-label">Tóm tắt dự án</label>' +
             '<div class="col-sm-9">' +
-            '<input type="text" class="form-control" id="inputTom_tat_du_an_4" name="tomtat[]"point="">' +
+            '<input type="text" class="form-control1" id="inputTom_tat_du_an_4" name="tomtat[]"point="">' +
             '</div>' +
             '</div>' +
             '<div class="form-group">'+
@@ -102,7 +102,7 @@ $(document).ready(function () {
             'class="col-sm-3 control-label">Ngày bắt đầu dự án</label>'+
             '<div class="col-sm-9">'+
             '<div class="input-group date">'+
-            '<input type="date" class="form-control"'+
+            '<input type="date" class="form-control1"'+
             'name="ngaybatdau[]" point=""/>'+
             '<span class="input-group-addon" id="btn_inputTime_begin_du_an">'+
             '<span class="glyphicon glyphicon-calendar"></span>'+
@@ -115,7 +115,7 @@ $(document).ready(function () {
             'class="col-sm-3 control-label">Ngày kết thúc dự án</label>'+
             '<div class="col-sm-9">'+
             '<div class="input-group date">'+
-            '<input type="date" class="form-control"'+
+            '<input type="date" class="form-control1"'+
             'name="ngayketthuc[]" point="">'+
             '<span class="input-group-addon" id="btn_inputTime_end_du_an">'+
             '<span class="glyphicon glyphicon-calendar"></span>'+
@@ -126,7 +126,7 @@ $(document).ready(function () {
             '<div class="form-group">' +
             '<label for="inputSo_nguoi_du_an_4" class="col-sm-3 control-label">Số người tham gia dự án</label>' +
             '<div class="col-sm-9">' +
-            '<input type="number"  min="1" class="form-control" id="inputSo_nguoi_du_an_4" name="songuoi[]" point="">' +
+            '<input type="number"  min="1" class="form-control1" id="inputSo_nguoi_du_an_4" name="songuoi[]" point="">' +
             '</div>' +
             '</div>' +
             '<div class="form-group">' +
@@ -152,12 +152,12 @@ $(document).ready(function () {
             '<div class="form-group">' +
             '<label for="inputEnviroment_du_an_4" class="col-sm-3 control-label">Môi trường phát triển</label>' +
             '<div class="col-sm-9">' +
-            '<input type="text" class="form-control" id="inputEnviroment_du_an_4" name="moitruongpt[]"  point="">' +
+            '<input type="text" class="form-control1" id="inputEnviroment_du_an_4" name="moitruongpt[]"  point="">' +
             '</div>' +
             '</div>' +
             '<div class="form-group">' +
             '<label for="inputNgonngu_trong_du_an_4" class="col-sm-3 control-label">Ngôn ngữ được sử dụng</label><div class="col-sm-9">' +
-            '<input type="text" class="form-control" id="inputNgonngu_trong_du_an_4" name="ngonngusd[]" point="">' +
+            '<input type="text" class="form-control1" id="inputNgonngu_trong_du_an_4" name="ngonngusd[]" point="">' +
             '</div>' +
             '</div>' +
             '</span>' +
@@ -179,14 +179,14 @@ $(document).ready(function () {
             '<div class="form-group">'+
             '<label for="inputTruongTotNghiep">Trường tốt nghiệp<span'+
             'class="required_input">(*)</span> :</label>'+
-            '<input type="text" class="form-control"'+
+            '<input type="text" class="form-control1"'+
             'name="inputTruongTotNghiep[]"/>'+
             '<label for="inputTruongTotNghiep" class="error"></label>'+
             '</div>'+
             '<div class="form-group">'+
             '<label for="inputNganhTotNghiep">Ngành tốt nghiệp<span'+
             'class="required_input">(*)</span> :</label>'+
-            '<input type="text" class="form-control"'+
+            '<input type="text" class="form-control1"'+
             'placeholder="Áp dụng cho Đai học trở lên." name="inputNganhTotNghiep[]"/>'+
             '<label for="inputNganhTotNghiep" class="error"></label>'+
             '</div>'+
@@ -194,7 +194,7 @@ $(document).ready(function () {
             '<label for="inputNamNhapHoc">Năm Nhập học<span'+
             'class="required_input">(*)</span> :</label>'+
             '<div class="input-group date">'+
-            '<input type="date" class="form-control" id="inputNamNhapHoc" name="inputNamNhapHoc[]"/>'+
+            '<input type="date" class="form-control1" id="inputNamNhapHoc" name="inputNamNhapHoc[]"/>'+
             '<span class="input-group-addon" id="btn_nam_nhap_hoc">'+
             '<span class="glyphicon glyphicon-calendar"></span>'+
             '</span>'+
@@ -205,7 +205,7 @@ $(document).ready(function () {
             '<label for="inputNamTotNghiep">Năm tốt nghiệp<span'+
             'class="required_input">(*)</span> :</label>'+
             '<div class="input-group date">'+
-            '<input type="date" class="form-control"'+
+            '<input type="date" class="form-control1"'+
             'name="inputNamTotNghiep[]"/>'+
             '<span class="input-group-addon" id="btn_nam_tot_nghiep">'+
             '<span class="glyphicon glyphicon-calendar"></span>'+

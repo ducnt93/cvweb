@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Bạn là người thuộc tính cách nào?</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="targettc" name="inputTinhCachBanThan">
+                    <input type="text" class="form-control1" id="targettc" name="inputTinhCachBanThan">
                     <div class="col-sm-12" id="searchKQtc" class="inner2"></div>
                     <div class="col-sm-12" id="sothichtc" class="tinhcach"></div>
                     <div class="col-sm-12" id="dstc" class="tinhcach"></div>
@@ -25,7 +25,7 @@
                 <label class="col-sm-2 control-label">Sở thích</label>
                 <!---chen them code vao day-->
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="target" name="inputSoThichBanThan">
+                    <input type="text" class="form-control1" id="target" name="inputSoThichBanThan">
                     <div class="col-sm-12" id="searchKQ" class="inner"></div>
                     <div class="col-sm-12" id="sothich" class="sothich"></div>
                     <div class="col-sm-12" id="dsst" class="sothich"></div>
